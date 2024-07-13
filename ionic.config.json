@@ -1,5 +1,7 @@
 {
   "name": "dementia-diagnostics-tool",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
