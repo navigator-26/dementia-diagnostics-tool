@@ -1,7 +1,7 @@
 {
-  "name": "dementia-diagnostics-tool",
+  "name": "ionic-conference-app",
+  "type": "angular",
   "integrations": {
     "capacitor": {}
-  },
-  "type": "angular"
+  }
 }
