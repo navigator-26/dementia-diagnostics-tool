@@ -10,9 +10,12 @@ export class WelcomePage implements AfterViewInit {
   username: string;
 
   constructor(public userData: UserData) {}
+  
+  
   ngAfterViewInit() {
     this.getUsername();
   }
+  
   ionViewDidEnter() {
 
   }

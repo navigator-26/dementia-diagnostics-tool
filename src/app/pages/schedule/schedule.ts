@@ -1,7 +1,6 @@
 import { Component, ViewChild, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController, IonList, IonRouterOutlet, LoadingController, ModalController, ToastController, Config } from '@ionic/angular';
-import {FormBuilder, Validators, FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { ScheduleFilterPage } from '../schedule-filter/schedule-filter';
 import { ConferenceData } from '../../providers/conference-data';
@@ -26,17 +25,6 @@ export class SchedulePage implements OnInit {
   confDate: string;
   showSearchbar: boolean;
 
-
-
-  firstFormGroup = this._formBuilder.group({
-    firstCtrl: ['', Validators.required],
-  });
-  secondFormGroup = this._formBuilder.group({
-    secondCtrl: ['', Validators.required],
-  });
-  isLinear = false;
-
-
   constructor(
     public alertCtrl: AlertController,
     public confData: ConferenceData,
@@ -46,14 +34,15 @@ export class SchedulePage implements OnInit {
     public routerOutlet: IonRouterOutlet,
     public toastCtrl: ToastController,
     public user: UserData,
-    public config: Config,
-    private _formBuilder: FormBuilder
+    public config: Config
   ) { }
 
   ngOnInit() {
     this.updateSchedule();
 
     this.ios = this.config.get('mode') === 'ios';
+
+    this.router.navigateByUrl('/app/tabs/recommendations');
   }
 
   updateSchedule() {

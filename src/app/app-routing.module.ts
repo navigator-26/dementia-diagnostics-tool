@@ -9,6 +9,10 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'landing',
+    loadChildren: () => import('./../app/landing-page/landing-page.module').then(m => m.LandingPageModule)
+  },
+  {
     path: 'account',
     loadChildren: () => import('./pages/account/account.module').then(m => m.AccountModule)
   },
@@ -31,6 +35,11 @@ const routes: Routes = [
   {
     path: 'tutorial',
     loadChildren: () => import('./pages/tutorial/tutorial.module').then(m => m.TutorialModule),
+    canMatch: [checkTutorialGuard]
+  },
+  {
+    path: 'questionnaire',
+    loadChildren: () => import('./questionnaire/questionnaire.module').then(m => m.QuestionnaireModule),
     canMatch: [checkTutorialGuard]
   }
 ];
