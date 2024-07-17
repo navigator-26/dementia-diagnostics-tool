@@ -1,22 +1,22 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Welcome {{ username }}</ion-title>
+    <ion-title class="primary-clr">Assessment</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content fullscreen>
+<ion-content fullscreen class="page">
+  <div class="background"></div>
   <div class="landing-container">
-    <img src="assets/img/logo.png" alt="App Logo" class="responsive-logo"/>
-    <p>Navigating the complexities of dementia can be challenging. Our questionnaire is designed to provide you with valuable insights and guidance on your cognitive health. Taking the first step towards understanding is empowering and can make a significant difference.</p>
-    <ion-grid>
-      <ion-row class="ion-justify-content-center">
-        <ion-col class="ion-text-center" size="auto">
-          <ion-button expand="block" routerLink="/questionnaire">Standardized Test</ion-button>
-        </ion-col>
-        <ion-col class="ion-text-center" size="auto">
-          <ion-button expand="block" routerLink="/personalized">Personalized Test</ion-button>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+    <!-- <img src="assets/img/logo.png" alt="App Logo" class="responsive-logo"/> -->
+    <!-- <div class="overlay"></div> -->
+    <div class="content-box">
+    <p>
+      "Understanding dementia can be tough. Our questionnaire provides essential insights into your cognitive health, empowering you to take the first step towards meaningful change."</p>
+    </div>
+    <div class="primary-clr margin-top">Choose one</div>
+    <div class="button-row">
+        <ion-button class="action-btn" fill="clear" expand="full" routerLink="/questionnaire">Standardized</ion-button>
+        <ion-button class="action-btn" fill="clear" expand="full" routerLink="/personalized">Personalized</ion-button>
+    </div>
   </div>
 </ion-content>
