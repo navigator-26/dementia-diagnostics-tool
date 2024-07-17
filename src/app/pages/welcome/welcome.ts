@@ -1,5 +1,7 @@
 import { AfterViewInit, Component } from '@angular/core';
 import { UserData } from '../../providers/user-data';
+import { AnimationController } from '@ionic/angular';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'page-welcome',
@@ -9,9 +11,17 @@ import { UserData } from '../../providers/user-data';
 export class WelcomePage implements AfterViewInit {
   username: string;
 
-  constructor(public userData: UserData) {}
+  // constructor(public userData: UserData) {}
   
   
+  constructor(public userData: UserData, private route: ActivatedRoute) {}
+
+  ngOnInit() {
+    // this.username = this.route.snapshot.paramMap.get('username');
+    // console.log(this.username);
+  }
+
+
   ngAfterViewInit() {
     this.getUsername();
   }
