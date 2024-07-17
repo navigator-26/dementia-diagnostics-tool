@@ -1,19 +1,65 @@
-.login-logo {
-  min-height: 200px;
+// .login-logo {
+//   min-height: 200px;
 
-  padding: 20px 0;
+//   padding: 20px 0;
 
+//   text-align: center;
+// }
+
+// .login-logo img {
+//   max-width: 150px;
+// }
+
+// .login-form {
+//   padding: 16px;
+// }
+
+// ion-input {
+//   margin-bottom: 10px;
+// }
+
+.cover-page {
+  --background: #a3cbe3; /* Cool blue background color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   text-align: center;
 }
 
-.login-logo img {
-  max-width: 150px;
+.container {
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  border-radius: 15px;
 }
 
-.login-form {
-  padding: 16px;
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #004d66; /* Darker blue for the title */
+  margin-bottom: 20px;
 }
 
-ion-input {
-  margin-bottom: 10px;
+.logo-placeholder {
+  margin-bottom: 20px;
+
+  img {
+    width: 150px;
+    height: 150px;
+  }
 }
+
+.commitment {
+  font-size: 1.2rem;
+  color: #004d66; /* Darker blue for the text */
+  margin-bottom: 30px;
+}
+
+.start-button {
+  --background: #4caf50; /* Green background for the button */
+  --border-radius: 20px;
+  font-size: 1.2rem;
+}
+

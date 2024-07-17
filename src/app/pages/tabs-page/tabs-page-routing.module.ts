@@ -62,7 +62,7 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            loadChildren: () => import('../welcome/welcome.module').then(m => m.WelcomeModule)
+            loadChildren: () => import('.././welcome/welcome.module').then(m => m.WelcomeModule)
           }
         ]
       },
