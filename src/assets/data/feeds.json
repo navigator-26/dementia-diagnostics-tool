@@ -23,7 +23,13 @@
             "title":"Resources",
              "description": "Information and resources for carers, parents, children and teachers and support for your employees and customers.",
             "link": "https://www.dementiauk.org/information-and-support/resources/"
+        },
+        {
+            "title":"The Tender Rose Dementia Care Blog",
+            "description": "The Tender Rose Dementia Care Blog",
+            "link":"https://www.tenderrose.com/blog"
         }
+
 
     ]
 }
