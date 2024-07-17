@@ -1,3 +1,9 @@
+<ion-fab vertical="bottom" horizontal="end" style="bottom: 75px;" > 
+  <ion-fab-button>
+    <ion-icon name="chatbubble-ellipses-outline" id="open-modal" expand="block"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
 <ion-tabs>
 
   <ion-tab-bar slot="bottom">
@@ -17,11 +23,7 @@
       <ion-label>About</ion-label>
     </ion-tab-button>
 
-    <ion-fab vertical="bottom" horizontal="end" size="small"> 
-      <ion-fab-button>
-        <ion-icon name="add" id="open-modal" expand="block"></ion-icon>
-      </ion-fab-button>
-    </ion-fab>
+
 
   </ion-tab-bar>
 
@@ -36,9 +38,9 @@
           <ion-button (click)="cancel()">Cancel</ion-button>
         </ion-buttons>
         <ion-title>Chat</ion-title>
-        <ion-buttons slot="end">
+        <!-- <ion-buttons slot="end">
           <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
-        </ion-buttons>
+        </ion-buttons> -->
       </ion-toolbar>
     </ion-header>
     <ion-content #content id="content" class="ion-padding">
@@ -49,9 +51,10 @@
                <!-- <ng-container *ngIf="Array.isArray(message.message)">
                 <p *ngFor="let msg of message.message;"> {{msg.option}} </p>
               </ng-container> -->
-              <p (click)="onMessageClicked($event,i,message.text)" *ngIf="!isCheckArray(message.text)" >{{message.text}}</p>
+              <ion-chip color="primary" (click)="onMessageClicked($event,i,message.text)" *ngIf="!isCheckArray(message.text)" >{{message.text}}</ion-chip>
+              
               <div *ngIf="isCheckArray(message.text)">
-                <p *ngFor="let msg of message.text" (click)="onMessageClicked($event,i,msg.option)"> {{msg.option}}</p>
+                <ion-chip color="secondary" *ngFor="let msg of message.text" (click)="onMessageClicked($event,i,msg.option)"> {{msg.option}}</ion-chip>
               </div>
              
 
