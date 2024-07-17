@@ -20,10 +20,11 @@ export class MapPage implements AfterViewInit {
     @Inject(DOCUMENT) private doc: Document,
     public confData: ConferenceData,
     public platform: Platform) {
-        this.coordinates = Geolocation.getCurrentPosition();
+       
     }
 
   async ngAfterViewInit() {
+    this.coordinates = Geolocation.getCurrentPosition();
     const appEl = this.doc.querySelector('ion-app');
     let isDark = false;
     let style = [];
@@ -36,7 +37,32 @@ export class MapPage implements AfterViewInit {
     );
 
     let map;
+    
+  // let service = new googleMaps.PlacesService(map);
 
+  // service.nearbySearch({
+  //   location: this.coordinates.__zone_symbol__value.coords.latitude,
+  //   radius: '5000',
+  //   types: ['dementia_center']
+  // }, (results, status) => {
+  //   for (var i = 0; i < results.length; i++) {
+  //     //this.createMarker(results[i]);
+  //     this.markers = new googleMaps.Marker({
+  //       map: map,
+  //       position: results[i].geometry.location
+  //   });
+  // console.log('this.markers', this.markers);
+  //   let infowindow = new googleMaps.InfoWindow();
+  
+  //   googleMaps.event.addListener(this.markers, 'click', () => {
+  //     // this.ngZone.run(() => {
+  //     //   infowindow.setContent(place.name);
+  //     //   infowindow.open(this.map, this.markers);
+  //     // });
+  //   });
+
+  //   }
+  // });
 
     this.confData.getMap().subscribe((mapData: any) => {
       const mapEle = this.mapElement.nativeElement;
@@ -86,25 +112,25 @@ export class MapPage implements AfterViewInit {
 
      
 
-      // mapData.forEach((markerData: any) => {
-      //   const infoWindow = new googleMaps.InfoWindow({
-      //     content: `<h5>${markerData.name}</h5>`
-      //   });
+      mapData.forEach((markerData: any) => {
+        const infoWindow = new googleMaps.InfoWindow({
+          content: `<h5>${markerData.name}</h5>`
+        });
 
-      //   const marker = new googleMaps.Marker({
-      //     position: markerData,
-      //     map,
-      //     title: markerData.name
-      //   });
+        const marker = new googleMaps.Marker({
+          position: markerData,
+          map,
+          title: markerData.name
+        });
 
-      //   marker.addListener('click', () => {
-      //     infoWindow.open(map, marker);
-      //   });
-      // });
+        marker.addListener('click', () => {
+          infoWindow.open(map, marker);
+        });
+      });
 
-      // googleMaps.event.addListenerOnce(map, 'idle', () => {
-      //   mapEle.classList.add('show-map');
-      // });
+      googleMaps.event.addListenerOnce(map, 'idle', () => {
+        mapEle.classList.add('show-map');
+      });
     });
 
     const observer = new MutationObserver((mutations) => {
@@ -153,55 +179,5 @@ function getGoogleMaps(apiKey: string): Promise<any> {
   });
 }
 
-// async function nearbySearch() {
-//   //@ts-ignore
-//   const { Place, SearchNearbyRankPreference } = await google.maps.importLibrary('places') as google.maps.PlacesLibrary;
-//   const { AdvancedMarkerElement } = await google.maps.importLibrary("marker") as google.maps.MarkerLibrary;
-
-//   // Restrict within the map viewport.
-//   let center = new google.maps.LatLng(52.369358, 4.889258);
-
-//   const request = {
-//       // required parameters
-//       fields: ['displayName', 'location', 'businessStatus'],
-//       locationRestriction: {
-//           center: center,
-//           radius: 500, 
-//       },
-//       // optional parameters
-//       includedPrimaryTypes: ['restaurant'],
-//       maxResultCount: 5,
-//       rankPreference: SearchNearbyRankPreference.POPULARITY,
-//       language: 'en-US',
-//       region: 'us',
-//   };
-
-//   //@ts-ignore
-//   const { places } = await Place.searchNearby(request);
-
-//   if (places.length) {
-//       console.log(places);
-
-//       const { LatLngBounds } = await google.maps.importLibrary("core") as google.maps.CoreLibrary;
-//       const bounds = new LatLngBounds();
-
-//       // Loop through and get all the results.
-//       places.forEach((place) => {
-//           const markerView = new AdvancedMarkerElement({
-//               map,
-//               position: place.location,
-//               title: place.displayName,
-//           });
-
-//           bounds.extend(place.location as google.maps.LatLng);
-//           console.log(place);
-//       });
-
-//       map.fitBounds(bounds);
-
-//   } else {
-//       console.log("No results");
-//   }
-// }
 
 

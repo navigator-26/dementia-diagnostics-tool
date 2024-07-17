@@ -77,7 +77,7 @@ export class AppComponent implements OnInit {
     });
 
     if(!this.loggedIn) {
-      this.router.navigateByUrl('/landing');
+      this.router.navigateByUrl('/login');
     }
   }
 
@@ -120,7 +120,7 @@ export class AppComponent implements OnInit {
   logout() {
     this.menu.enable(false);
     this.userData.logout().then(() => {
-      return this.router.navigateByUrl('/app/login');
+      return this.router.navigateByUrl('/login');
     });
   }
 
