@@ -4,11 +4,6 @@ import { checkTutorialGuard } from './providers/check-tutorial.guard';
 
 const routes: Routes = [
   {
-    path: '',
-    redirectTo: '/tutorial',
-    pathMatch: 'full'
-  },
-  {
     path: 'landing',
     loadChildren: () => import('./../app/landing-page/landing-page.module').then(m => m.LandingPageModule)
   },

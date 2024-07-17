@@ -77,7 +77,7 @@ export class AppComponent implements OnInit {
     });
 
     if(!this.loggedIn) {
-      this.router.navigateByUrl('/login');
+      this.router.navigateByUrl('/landing');
     }
   }
 

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser'
 import { FeedsData } from '../../providers/feeds-data';
-
+import { Browser } from '@capacitor/browser';
 @Component({
   selector: 'page-speaker-list',
   templateUrl: 'speaker-list.html',
@@ -17,5 +17,9 @@ export class SpeakerListPage {
       this.feeds = feeds;
     });
   }
+
+  openUrl(feedUrl) {
+     Browser.open({ url: feedUrl });
+  };
 
 }

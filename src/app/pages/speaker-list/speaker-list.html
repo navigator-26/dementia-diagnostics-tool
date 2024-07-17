@@ -23,9 +23,10 @@
               <ion-label>
                 <h2>{{feed.title}}</h2>
                 <p>{{feed.description}}</p>
-                <a *ngIf="feed.link" onclick="window.open(feed.link);" href="feed.link">{{feed.link}}</a>
+                <a *ngIf="feed.link" (click)="openUrl(feed.link);">{{feed.link}}</a>
 
-                <iframe *ngIf="feed.url" [src]="this.sanitizer.bypassSecurityTrustResourceUrl(feed.url)" frameborder="0" width="560" height="315"></iframe>
+                <iframe *ngIf="feed.url" [src]="feed.url" frameborder="0" width="560" height="315"></iframe>
+
               </ion-label>
             </ion-item>
           </ion-card-header>
