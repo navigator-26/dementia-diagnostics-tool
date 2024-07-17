@@ -15,10 +15,7 @@ export class QuestionnaireComponent {
   currentQuestionIndex = 0;
   showFeedback = false;
   feedbackMessage : Array<string> = [];
-
-  constructor(private alertController: AlertController) {
-
-  }
+  constructor(private alertController: AlertController) {}
 
   questions: Question[] = [
     {
@@ -145,8 +142,12 @@ export class QuestionnaireComponent {
   }
 
   onAnswerSelect(event: any) {
+    if (event.detail.value) {
     const selectedValue = event.detail.value;
     this.feedbackMessage.push(selectedValue);
+    } else {
+      console.log("Please select an option");
+    }
   }
 
   nextQuestion() {

@@ -18,48 +18,108 @@
 //   margin-bottom: 10px;
 // }
 
-.cover-page {
-  --background: #a3cbe3; /* Cool blue background color */
+// .cover-page {
+//   --background: #a3cbe3; /* Cool blue background color */
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 100vh;
+//   text-align: center;
+// }
+
+// .container {
+//   max-width: 400px;
+//   width: 100%;
+//   padding: 20px;
+//   background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+//   border-radius: 15px;
+// }
+
+// .title {
+//   font-size: 2.5rem;
+//   font-weight: bold;
+//   color: #004d66; /* Darker blue for the title */
+//   margin-bottom: 20px;
+// }
+
+// .logo-placeholder {
+//   margin-bottom: 20px;
+
+//   img {
+//     width: 150px;
+//     height: 150px;
+//   }
+// }
+
+// .commitment {
+//   font-size: 1.2rem;
+//   color: #004d66; /* Darker blue for the text */
+//   margin-bottom: 30px;
+// }
+
+// .start-button {
+//   --background: #4caf50; /* Green background for the button */
+//   --border-radius: 20px;
+//   font-size: 1.2rem;
+// }
+
+
+.page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.background {
+  background: url('./../../../assets/img/together5.png');
+  background-size: cover;
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.overlay {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
-.container {
-  max-width: 400px;
-  width: 100%;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+.content-box {
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #004d66; /* Darker blue for the title */
-  margin-bottom: 20px;
+  font-family: 'Your-Aesthetic-Font', sans-serif;
+  color: #5D3F2D; // Autumn brown
+  margin: 0;
 }
 
-.logo-placeholder {
-  margin-bottom: 20px;
+.message {
+  font-family: 'Your-Aesthetic-Font', sans-serif;
+  color: #A67B5C; // Soft autumn color
+  margin: 10px 0;
+}
 
-  img {
-    width: 150px;
-    height: 150px;
+.action-button {
+  background-color: #D4A15A; // Autumn gold
+  color: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+
+  &:hover {
+    background-color: #BF7B30; // Burnt orange
   }
 }
-
-.commitment {
-  font-size: 1.2rem;
-  color: #004d66; /* Darker blue for the text */
-  margin-bottom: 30px;
-}
-
-.start-button {
-  --background: #4caf50; /* Green background for the button */
-  --border-radius: 20px;
-  font-size: 1.2rem;
-}
-
