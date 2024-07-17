@@ -4,9 +4,8 @@ import { checkTutorialGuard } from './providers/check-tutorial.guard';
 
 const routes: Routes = [
   {
-    path: '',
-    redirectTo: '/tutorial',
-    pathMatch: 'full'
+    path: 'landing',
+    loadChildren: () => import('./../app/landing-page/landing-page.module').then(m => m.LandingPageModule)
   },
   // {
   //   path: 'landing',
@@ -41,6 +40,7 @@ const routes: Routes = [
     path: 'questionnaire',
     loadChildren: () => import('./questionnaire/questionnaire.module').then(m => m.QuestionnaireModule),
     canMatch: [checkTutorialGuard]
+
   },
   {
     path: 'personalized',

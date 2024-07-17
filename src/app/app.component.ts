@@ -20,11 +20,6 @@ import { UserData } from './providers/user-data';
 export class AppComponent implements OnInit {
   appPages = [
     {
-      title: 'Test',
-      url: '/app/tabs/test',
-      icon: 'calendar'
-    },
-    {
       title: 'Feeds',
       url: '/app/tabs/feeds',
       icon: 'people'
@@ -125,7 +120,7 @@ export class AppComponent implements OnInit {
   logout() {
     this.menu.enable(false);
     this.userData.logout().then(() => {
-      return this.router.navigateByUrl('/app/login');
+      return this.router.navigateByUrl('/login');
     });
   }
 

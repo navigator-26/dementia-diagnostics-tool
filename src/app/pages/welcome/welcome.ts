@@ -11,6 +11,9 @@ import { ActivatedRoute } from '@angular/router';
 export class WelcomePage implements AfterViewInit {
   username: string;
 
+  // constructor(public userData: UserData) {}
+  
+  
   constructor(public userData: UserData, private route: ActivatedRoute) {}
 
   ngOnInit() {
@@ -22,6 +25,7 @@ export class WelcomePage implements AfterViewInit {
   ngAfterViewInit() {
     this.getUsername();
   }
+  
   ionViewDidEnter() {
 
   }
