@@ -116,6 +116,7 @@ export class QuestionnaireComponent {
           text: 'No',
           role: 'cancel',
           handler: () => {
+            this.router.navigateByUrl(`/app/tabs/welcome`);
             console.log('User canceled the submission');
           }
         },
