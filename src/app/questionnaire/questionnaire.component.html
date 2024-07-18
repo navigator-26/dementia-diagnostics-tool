@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button text="" class="primary-clr" defaultHref="/landing"></ion-back-button>
+      <ion-back-button text="" class="primary-clr" defaultHref="/welcome"></ion-back-button>
     </ion-buttons>
     <ion-title class="primary-clr">
       Standardized Assessment
@@ -11,6 +11,7 @@
   
 <ion-content class="ion-padding stretch-content">
   <ion-img class="padding-bottom" src="assets/img/cookie-theft.png"></ion-img>
+  <ion-progress-bar class="custom-progress-bar" [value]="currentQuestionIndex / questions.length"></ion-progress-bar>
   <h2 class="primary-text">{{ currentQuestion }}</h2>
   <ion-list>
     <ion-radio-group (ionChange)="onAnswerSelect($event)">
@@ -23,8 +24,8 @@
   <div class="button-row">
     <ion-button class="action-btn" fill="clear" (click)="prevQuestion()" [disabled]="isFirstQuestion" [hidden]="isLastQuestion">Previous</ion-button>
     <ion-button class="action-btn" fill="clear" (click)="nextQuestion()" [hidden]="isLastQuestion">Next</ion-button>
-    <ion-button class="action-btn" fill="clear" (click)="getConsent()" [hidden]="!isLastQuestion">Submit</ion-button>
-    <ion-progress-bar class="custom-progress-bar" [value]="currentQuestionIndex / questions.length"></ion-progress-bar>
+    <ion-checkbox [hidden]="!isLastQuestion"></ion-checkbox><span [hidden]="!isLastQuestion"> I agree to the terms and conditions</span>
+    <ion-button class="action-btn submit-btn" fill="clear" (click)="submitQuestionnaire()" [hidden]="!isLastQuestion">Submit</ion-button>
   </div>
 </ion-content>
   

@@ -14,6 +14,16 @@ ion-toolbar ion-menu-button {
   --color: white;
 }
 
+ion-content {
+  background: #F4F1EC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
 .about-header {
   position: relative;
 
@@ -59,7 +69,7 @@ ion-toolbar ion-menu-button {
 
   border-radius: 10px;
 
-  background: var(--ion-background-color, #ffffff);
+  background: #F4F1EC !important;
 
   z-index: 2; // display rounded border above header image
 }
@@ -98,4 +108,64 @@ ion-toolbar ion-menu-button {
 
 .ios .about-info h3 {
   font-weight: 700;
+}
+
+.primary-clr {
+  color : #6F4E37;
+}
+
+.primary-txt{
+  color : #4A4A4A;
+}
+
+ion-content {
+  background: #F4F1EC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  ion-img {
+    padding-bottom : 40px !important;
+  }
+
+  h2 {
+    padding-bottom : 15px !important;
+  }
+
+  ion-list {
+    padding-bottom : 45px !important;
+  }
+
+  .action-btn {
+    background-color: #D4A15A; // Autumn gold
+    color: white;
+    border-radius: 20px;
+   // padding: 10px 10px;
+  
+    &:hover {
+      background-color: #BF7B30; // Burnt orange
+    }
+  }
+
+  .about-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+    text-align: center;
+    background: #F4F1EC;
+  }
+
+  .responsive-logo {
+    width: 80%; 
+    max-width: 500px; 
+    height: auto; 
+    padding-top: 20px !important;
+  }
+
 }

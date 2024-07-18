@@ -47,11 +47,11 @@ const routes: Routes = [
     loadChildren: () => import('./personalized/personalized.module').then(m => m.PersonalizedModule),
     canMatch: [checkTutorialGuard]
   },
-  // {
-  //   path: 'recommendations',
-  //   loadChildren: () => import('./pages/recommendations/recommendations.module').then(m => m.RecommendationsPageModule),
-  //   canMatch: [checkTutorialGuard]
-  // }
+  {
+    path: 'recommendations',
+    loadChildren: () => import('./../app/pages/recommendations/recommendations.module').then(m => m.RecommendationsPageModule),
+    canMatch: [checkTutorialGuard]
+  }
 ];
 
 @NgModule({

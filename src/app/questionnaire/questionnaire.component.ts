@@ -107,29 +107,29 @@ export class QuestionnaireComponent {
     }
   ];
 
-  async presentConsentAlert() {
-    const alert = await this.alertController.create({
-      header: 'Consent',
-      message: 'Do you consent to submit your questionnaire results to a 3rd party API?',
-      buttons: [
-        {
-          text: 'No',
-          role: 'cancel',
-          handler: () => {
-            this.router.navigateByUrl(`/app/tabs/welcome`);
-            console.log('User canceled the submission');
-          }
-        },
-        {
-          text: 'Yes',
-          handler: () => {
-            this.submitQuestionnaire();
-          }
-        }
-      ]
-    });
-    await alert.present();
-  }
+  // async presentConsentAlert() {
+  //   const alert = await this.alertController.create({
+  //     header: 'Consent',
+  //     message: 'Do you consent to submit your questionnaire results to a 3rd party API?',
+  //     buttons: [
+  //       {
+  //         text: 'No',
+  //         role: 'cancel',
+  //         handler: () => {
+  //           this.router.navigateByUrl(`/app/tabs/welcome`);
+  //           console.log('User canceled the submission');
+  //         }
+  //       },
+  //       {
+  //         text: 'Yes',
+  //         handler: () => {
+  //           this.submitQuestionnaire();
+  //         }
+  //       }
+  //     ]
+  //   });
+  //   await alert.present();
+  // }
 
 
   get currentQuestion(): string {
@@ -173,11 +173,6 @@ export class QuestionnaireComponent {
     }
   }
 
-  getConsent() {
-    //alert
-    this.presentConsentAlert();
-  }
-
   submitQuestionnaire() {
     let res = this.feedbackMessage.join("");
     console.log(res);
@@ -200,7 +195,7 @@ export class QuestionnaireComponent {
     this.httpClient.post("https://api.ibm.com/digitalhealth/run/api/v1/mmse/text/prediction", body, {headers: httpHeaders})
       .subscribe(data => {
         console.log(data['_body']);
-        this.router.navigate(['recommendations']);
+        this.router.navigateByUrl('/app/tabs/recommendations');
        }, error => {
         console.log(error);
       });

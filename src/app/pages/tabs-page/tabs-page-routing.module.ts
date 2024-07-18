@@ -66,15 +66,15 @@ const routes: Routes = [
           }
         ]
       },
-      // {
-      //   path: 'recommendations',
-      //   children: [
-      //     {
-      //       path: '',
-      //       loadChildren: () => import('../recommendations/recommendations.module').then(m => m.RecommendationsPageModule)
-      //     }
-      //   ]
-      // },
+      {
+        path: 'recommendations',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../recommendations/recommendations.module').then(m => m.RecommendationsPageModule)
+          }
+        ]
+      },
       {
         path: '',
         redirectTo: '/app/tabs/schedule',
