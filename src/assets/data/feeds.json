@@ -1,0 +1,35 @@
+{
+
+    "feeds": [
+        {
+            "title" : "Living with dementia",
+            "description": "Information and support to help you live well with dementia – from keeping safe and dealing with stigma to assistive tech and communication tips.",
+            "link": "https://www.dementiauk.org/information-and-support/living-with-dementia/"
+
+        },
+        {
+            "title": "Health advice",
+            "description": "Information on helping a person with dementia stay physically well, including tips for eating and drinking and managing anxiety and depression.Information on helping a person with dementia stay physically well, including tips for eating and drinking and managing anxiety and depression.",
+            "link": "https://www.dementiauk.org/information-and-support/health-advice/"
+
+        },
+        {
+            "title": "Caregiver Training",
+            "description": "Caregiver Training: Refusal to Bathe | UCLA Alzheimer's and Dementia Care",
+            "url": "https://www.youtube.com/embed/-rB5-AkqpjQ?si=cBjDDaCGwUS2e1xL"
+
+        },
+        {
+            "title":"Resources",
+             "description": "Information and resources for carers, parents, children and teachers and support for your employees and customers.",
+            "link": "https://www.dementiauk.org/information-and-support/resources/"
+        },
+        {
+            "title":"The Tender Rose Dementia Care Blog",
+            "description": "The Tender Rose Dementia Care Blog",
+            "link":"https://www.tenderrose.com/blog"
+        }
+
+
+    ]
+}

@@ -1,19 +1,25 @@
 import { Component } from '@angular/core';
-import { ConferenceData } from '../../providers/conference-data';
-
+import { DomSanitizer } from '@angular/platform-browser'
+import { FeedsData } from '../../providers/feeds-data';
+import { Browser } from '@capacitor/browser';
 @Component({
   selector: 'page-speaker-list',
   templateUrl: 'speaker-list.html',
   styleUrls: ['./speaker-list.scss'],
 })
 export class SpeakerListPage {
-  speakers: any[] = [];
+  feeds: any[] = [];
 
-  constructor(public confData: ConferenceData) {}
+  constructor(public feedsData: FeedsData, public sanitizer: DomSanitizer) {}
 
   ionViewDidEnter() {
-    this.confData.getSpeakers().subscribe((speakers: any[]) => {
-      this.speakers = speakers;
+    this.feedsData.getFeeds().subscribe((feeds: any[]) => {
+      this.feeds = feeds;
     });
   }
+
+  openUrl(feedUrl) {
+     Browser.open({ url: feedUrl });
+  };
+
 }

@@ -1,4 +1,6 @@
 import { Component, ElementRef, Inject, ViewChild, AfterViewInit } from '@angular/core';
+import { Geolocation } from '@capacitor/geolocation';
+
 import { ConferenceData } from '../../providers/conference-data';
 import { Platform } from '@ionic/angular';
 import { DOCUMENT} from '@angular/common';
@@ -12,13 +14,17 @@ import { darkStyle } from './map-dark-style';
 })
 export class MapPage implements AfterViewInit {
   @ViewChild('mapCanvas', { static: true }) mapElement: ElementRef;
-
+  coordinates;
+  markers = [];
   constructor(
     @Inject(DOCUMENT) private doc: Document,
     public confData: ConferenceData,
-    public platform: Platform) {}
+    public platform: Platform) {
+       
+    }
 
   async ngAfterViewInit() {
+    this.coordinates = Geolocation.getCurrentPosition();
     const appEl = this.doc.querySelector('ion-app');
     let isDark = false;
     let style = [];
@@ -27,19 +33,84 @@ export class MapPage implements AfterViewInit {
     }
 
     const googleMaps = await getGoogleMaps(
-      'YOUR_API_KEY_HERE'
+      'AIzaSyC0wJ8nigMsFcu8x400koar_v6tzr1_z0o'
     );
 
     let map;
+    
+  // let service = new googleMaps.PlacesService(map);
+
+  // service.nearbySearch({
+  //   location: this.coordinates.__zone_symbol__value.coords.latitude,
+  //   radius: '5000',
+  //   types: ['dementia_center']
+  // }, (results, status) => {
+  //   for (var i = 0; i < results.length; i++) {
+  //     //this.createMarker(results[i]);
+  //     this.markers = new googleMaps.Marker({
+  //       map: map,
+  //       position: results[i].geometry.location
+  //   });
+  // console.log('this.markers', this.markers);
+  //   let infowindow = new googleMaps.InfoWindow();
+  
+  //   googleMaps.event.addListener(this.markers, 'click', () => {
+  //     // this.ngZone.run(() => {
+  //     //   infowindow.setContent(place.name);
+  //     //   infowindow.open(this.map, this.markers);
+  //     // });
+  //   });
+
+  //   }
+  // });
 
     this.confData.getMap().subscribe((mapData: any) => {
       const mapEle = this.mapElement.nativeElement;
-
+      const coordinates = {
+        lat: this.coordinates.__zone_symbol__value.coords.latitude,
+        lng: this.coordinates.__zone_symbol__value.coords.longitude
+      };
       map = new googleMaps.Map(mapEle, {
-        center: mapData.find((d: any) => d.center),
+        center: coordinates,
         zoom: 16,
         styles: style
       });
+
+    //   const request = {
+    //     query: "dementia center",
+    //     fields: ["name", "geometry"],
+    //   };
+    
+    //   let service = new googleMaps.maps.places.PlacesService(map);
+    
+    //   service.findPlaceFromQuery(
+    //     request,
+    //     (
+    //       results: googleMap.maps.places.PlaceResult[] | null,
+    //       status: google.maps.places.PlacesServiceStatus
+    //     ) => {
+    //       if (status === googleMaps.maps.places.PlacesServiceStatus.OK && results) {
+    //         for (let i = 0; i < results.length; i++) {
+    //           this.createMarker(results[i]);
+    //         }
+    
+    //         map.setCenter(results[0].geometry!.location!);
+    //       }
+    //     }
+    //   );
+    // }
+    
+    // function createMarker(place) {
+    //   if (!place.geometry || !place.geometry.location) return;
+    
+    //   const marker = new google.maps.Marker({
+    //     map,
+    //     position: place.geometry.location,
+    //   });
+    // }
+    
+
+     
 
       mapData.forEach((markerData: any) => {
         const infoWindow = new googleMaps.InfoWindow({
@@ -81,6 +152,9 @@ export class MapPage implements AfterViewInit {
   }
 }
 
+
+
+
 function getGoogleMaps(apiKey: string): Promise<any> {
   const win = window as any;
   const googleModule = win.google;
@@ -104,4 +178,6 @@ function getGoogleMaps(apiKey: string): Promise<any> {
     };
   });
 }
+
+
 

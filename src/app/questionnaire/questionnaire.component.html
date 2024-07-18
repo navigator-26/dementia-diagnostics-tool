@@ -1,31 +1,33 @@
 <ion-header>
     <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-back-button defaultHref="/landing"></ion-back-button>
-      </ion-buttons>
-      <ion-title>
-        
-      </ion-title>
+      <ion-title>Image Questionnaire</ion-title>
     </ion-toolbar>
   </ion-header>
   
   <ion-content class="ion-padding">
-    <ion-img src="assets/img/cookie-theft.png"></ion-img>
+    <ion-img src="assets/images/your-image.png"></ion-img>
   
     <h2>{{ currentQuestion }}</h2>
   
     <ion-list>
       <ion-radio-group (ionChange)="onAnswerSelect($event)">
         <ion-item *ngFor="let option of currentOptions">
-          <ion-label>{{ option.label }}  {{  option.value}}</ion-label>
+          <ion-label>{{ option.label }}</ion-label>
           <ion-radio slot="start" [value]="option.value"></ion-radio>
         </ion-item>
       </ion-radio-group>
     </ion-list>
   
-    <ion-button (click)="prevQuestion()" [disabled]="isFirstQuestion" [hidden]="isLastQuestion">Previous</ion-button>
-    <ion-button (click)="nextQuestion()" [hidden]="isLastQuestion">Next</ion-button>
-    <ion-button (click)="getConsent()" [hidden]="!isLastQuestion">Submit</ion-button>
+    <ion-button (click)="prevQuestion()" [disabled]="isFirstQuestion">Previous</ion-button>
+    <ion-button (click)="nextQuestion()" [disabled]="isLastQuestion">Next</ion-button>
+  
     <ion-progress-bar [value]="currentQuestionIndex / questions.length"></ion-progress-bar>
+  
+    <ion-alert
+    *ngIf="showFeedback"
+    header="Feedback"
+    message="{{ feedbackMessage }}"
+    buttons="['OK']">
+  </ion-alert>
   </ion-content>
   

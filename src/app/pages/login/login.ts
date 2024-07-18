@@ -27,8 +27,11 @@ export class LoginPage {
 
     if (form.valid) {
       this.userData.login(this.login.username);
+       this.router.navigateByUrl('/landing');
+     // this.router.navigateByUrl('/app/tabs/welcome');
+
       // this.router.navigateByUrl(`/app/tabs/landing/${this.login.username}`);
-      this.router.navigateByUrl(`/app/tabs/welcome`);
+     // this.router.navigateByUrl(`/app/tabs/welcome`);
       //this.router.navigateByUrl(`/landing`);
 
       //this.router.navigateByUrl(`/app/tabs/welcome`);

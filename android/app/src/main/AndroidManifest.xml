@@ -12,4 +12,9 @@
         </provider>
     </application>
     <uses-permission android:name="android.permission.INTERNET"/>
+    <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyC0wJ8nigMsFcu8x400koar_v6tzr1_z0o"/>
+    
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-feature android:name="android.hardware.location.gps" />
 </manifest>

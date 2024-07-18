@@ -17,6 +17,7 @@ export class RecommendationsPage {
     header: 'Select a Location'
   };
 
+
   current = 50;
   max = 50;
   stroke = 15;
