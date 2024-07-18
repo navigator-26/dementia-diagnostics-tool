@@ -1,4 +1,4 @@
-<ion-header>
+  <ion-header>
     <ion-toolbar>
       <ion-buttons slot="start">
         <ion-back-button text="" class="primary-clr" defaultHref="/landing"></ion-back-button>
@@ -8,9 +8,24 @@
       </ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <ion-content class="ion-padding">
-    <div class="image-container">
-      <img src="assets/img/coming_soon.png" alt="Under Construction">
+    
+  <ion-content class="ion-padding stretch-content" *ngIf="questions.length > 0">
+    <!-- <ion-img class="padding-bottom" src="assets/img/cookie-theft.png"></ion-img> -->
+    <ion-progress-bar class="custom-progress-bar" [value]="currentQuestionIndex / questions.length"></ion-progress-bar>
+    <h2 class="primary-text">{{ currentQuestion }}</h2>
+    <ion-list>
+      <ion-radio-group (ionChange)="onAnswerSelect($event, currentQuestionSet)">
+        <ion-item *ngFor="let option of currentOptions">
+          <ion-label class="secondary-text">{{ option.label }}  {{  option.value}}</ion-label>
+          <ion-radio slot="start" [value]="option.value"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+    <div class="button-row">
+      <ion-button class="action-btn" fill="clear" (click)="prevQuestion()" [disabled]="isFirstQuestion" [hidden]="isLastQuestion">Previous</ion-button>
+      <ion-button class="action-btn" fill="clear" (click)="nextQuestion()" [hidden]="isLastQuestion">Next</ion-button>
+      <ion-checkbox [hidden]="!isLastQuestion"></ion-checkbox><span [hidden]="!isLastQuestion"> I agree to the terms and conditions</span>
+      <ion-button class="action-btn submit-btn" fill="clear" (click)="submitQuestionnaire()" [hidden]="!isLastQuestion">Submit</ion-button>
     </div>
   </ion-content>
+    

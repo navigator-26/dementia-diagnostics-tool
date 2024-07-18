@@ -39,13 +39,11 @@ const routes: Routes = [
   {
     path: 'questionnaire',
     loadChildren: () => import('./questionnaire/questionnaire.module').then(m => m.QuestionnaireModule),
-    canMatch: [checkTutorialGuard]
 
   },
   {
     path: 'personalized',
     loadChildren: () => import('./personalized/personalized.module').then(m => m.PersonalizedModule),
-    canMatch: [checkTutorialGuard]
   },
   {
     path: 'recommendations',

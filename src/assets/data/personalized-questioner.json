@@ -1,0 +1,242 @@
+{
+    "questions": [
+        {
+            "question": "Do you have any severe allergies? ",
+            "options": [
+                {
+                    "label": "A.",
+                    "value": "Yes"
+                },
+                {
+                    "label": "B.",
+                    "value": "No"
+                }
+            ],
+            "score":4,
+            "correctAnswer": "No"
+        },
+        {
+            "question": "What’s your kid’s favourite food dish?  ",
+            "options": [
+                {
+                    "label": "A.",
+                    "value": "Burger"
+                },
+                {
+                    "label": "B.",
+                    "value": "Burrito"
+                },
+                {
+                    "label": "C.",
+                    "value": "Chips"
+                }
+            ],
+            "score":4,
+            "correctAnswer": "Burrito"
+        },
+        {
+            "question": "What’s your spouse’s favourite color ? ",
+            "options": [
+                {
+                    "label": "A.",
+                    "value": "Blue"
+                },
+                {
+                    "label": "B.",
+                    "value": "Red"
+                },
+                {
+                    "label": "C.",
+                    "value": "Green"
+                }
+            ],
+            "score":4,
+            "correctAnswer": "Blue"
+        },
+        {
+            "question": "Do you have any investment plans for your kids/spouse?",
+            "options": [
+                {
+                    "label": "A.",
+                    "value": "Yes"
+                },
+                {
+                    "label": "B.",
+                    "value": "No"
+                }
+            ],
+            "score":3,
+            "correctAnswer": "Yes"
+        },
+        {
+            "question": "Which was the last family gathering you attended? ",
+            "options": [
+                {
+                    "label": "A.",
+                    "value": "Tim's retirement party"
+                },
+                {
+                    "label": "B.",
+                    "value": "Anniversary celebration of Kristin and Julien "
+                },
+                {
+                    "label": "C.",
+                    "value": "Nick’s birthday party "
+                }
+            ],
+            "score":3,
+            "correctAnswer": "Tim's retirement party"
+        },
+        {
+            "question": "Which university you graduated from?",
+            "options": [
+                {
+                    "label": "A.",
+                    "value": "University of Leicester"
+                },
+                {
+                    "label": "B.",
+                    "value": "University of Essex"
+                },
+                {
+                    "label": "C.",
+                    "value": "University of London"
+                }
+            ],
+            "score":3,
+            "correctAnswer": "University of London"
+        },
+        {
+            "question": "Hey what is your favourite dish ? ",
+            "options": [
+                {
+                    "label": "A.",
+                    "value": "Shepherd's Pie"
+                },
+                {
+                    "label": "B.",
+                    "value": "Beef Wellington"
+                },
+                {
+                    "label": "C.",
+                    "value": "Fish and Chips"
+                }
+            ],
+            "score":2,
+            "correctAnswer": "Shepherd's Pie"
+        },
+        {
+            "question": "Which television show you like watching the most ?",
+            "options": [
+                {
+                    "label": "A.",
+                    "value": "The Big Bang Theory"
+                },
+                {
+                    "label": "B.",
+                    "value": "F.R.I.E.N.D.S."
+                },
+                {
+                    "label": "C.",
+                    "value": "The Suits "
+                }
+            ],
+            "score":2,
+            "correctAnswer": "F.R.I.E.N.D.S."
+        },
+        {
+            "question": "What was your profession, was it business or a job ?",
+            "options": [
+                {
+                    "label": "A.",
+                    "value": "Job"
+                },
+                {
+                    "label": "B.",
+                    "value": "Business"
+                }
+            ],
+            "score":2,
+            "correctAnswer": "Job"
+        },
+        {
+            "question": "How do you like to spend your leisure time (hobby)?",
+            "options": [
+                {
+                    "label": "A.",
+                    "value": "Gardening"
+                },
+                {
+                    "label": "B.",
+                    "value": "Reading books"
+                },
+                {
+                    "label": "C.",
+                    "value": "Squash"
+                }
+            ],
+            "score":2,
+            "correctAnswer": "Gardening"
+        },
+        {
+            "question": "Out of all the places you have travelled so far, which is your most loved one?",
+            "options": [
+                {
+                    "label": "A.",
+                    "value": "Scotland"
+                },
+                {
+                    "label": "B.",
+                    "value": "Paris"
+                },
+                {
+                    "label": "C.",
+                    "value": "San Fransico"
+                }
+            ],
+            "score":2,
+            "correctAnswer": "Paris"
+        },
+        {
+            "question": "Where do you keep your car keys usually?",
+            "options": [
+                {
+                    "label": "A.",
+                    "value": "Wadrobe"
+                },
+                {
+                    "label": "B.",
+                    "value": "Garden"
+                },
+                {
+                    "label": "C.",
+                    "value": "Drawer"
+                }
+            ],
+            "score":2,
+            "correctAnswer": "Drawer"
+        },
+        {
+            "question": "Do you remember which was the brand of your very first car you owned?",
+            "options": [
+                {
+                    "label": "A.",
+                    "value": "Volkswagen"
+                },
+                {
+                    "label": "B.",
+                    "value": "Audi"
+                },
+                {
+                    "label": "C.",
+                    "value": "Tesla"
+                }
+            ],
+            "score":2,
+            "correctAnswer": "Volkswagen"
+        }
+
+ 
+    ]
+}
+
