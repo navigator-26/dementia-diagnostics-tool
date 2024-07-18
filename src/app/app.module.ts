@@ -10,7 +10,6 @@ import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { FormsModule } from '@angular/forms';
-import { AnimationService } from './providers/animation.service';
 
 @NgModule({
   imports: [
@@ -28,7 +27,7 @@ import { AnimationService } from './providers/animation.service';
 
   ],
   declarations: [AppComponent],
-  providers: [InAppBrowser,AnimationService],
+  providers: [InAppBrowser],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
