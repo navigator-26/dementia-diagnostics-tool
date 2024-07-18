@@ -2,8 +2,9 @@
 
     "feeds": [
         {
+            "img": "assets/img/feeds/male_care.jpg",
             "title":"Factors associated with burden among male caregivers for people with dementia",
-            "description":"",
+            "description":"Factors associated with burden among male caregivers for people with dementia",
             "link":"https://journals.lww.com/jcma/fulltext/2022/04000/factors_associated_with_burden_among_male.8.aspx"
         },
         {
@@ -16,7 +17,6 @@
             "title": "Health advice",
             "description": "Information on helping a person with dementia stay physically well, including tips for eating and drinking and managing anxiety and depression.Information on helping a person with dementia stay physically well, including tips for eating and drinking and managing anxiety and depression.",
             "link": "https://www.dementiauk.org/information-and-support/health-advice/"
-
         },
         {
             "title":"Resources",
@@ -30,13 +30,12 @@
         },
         {
             "title":"The Male Face of Caregiving: A Scoping Review of Men Caring for a Person With Dementia",
-            "description":"",
+            "description":"The Male Face of Caregiving: A Scoping Review of Men Caring for a Person With Dementia",
             "link":"https://journals.sagepub.com/doi/full/10.1177/1557988313519671"
         },
         {
             "title": "Walk 50 Miles in June",
             "description": "Step out on a mission this June and walk 50 miles for families facing dementia.",
-            "image": "../img/walk-50webp",
             "link": "https://www.dementiauk.org/get-involved/find-your-event/walk-50-miles/"
         }
 
