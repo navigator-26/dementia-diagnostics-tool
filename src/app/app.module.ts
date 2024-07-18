@@ -21,7 +21,9 @@ import { FormsModule } from '@angular/forms';
     IonicStorageModule.forRoot(),
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production
-    })
+    }),
+    HttpClientModule
+
   ],
   declarations: [AppComponent],
   providers: [InAppBrowser],
