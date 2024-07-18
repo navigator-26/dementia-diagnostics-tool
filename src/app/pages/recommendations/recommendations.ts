@@ -17,7 +17,8 @@ export class RecommendationsPage {
     header: 'Select a Location'
   };
 
-  current = 27;
+
+  current = 50;
   max = 50;
   stroke = 15;
   radius = 125;
