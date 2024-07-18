@@ -149,8 +149,12 @@ export class QuestionnaireComponent {
   }
 
   onAnswerSelect(event: any) {
+    if (event.detail.value) {
     const selectedValue = event.detail.value;
     this.feedbackMessage.push(selectedValue);
+    } else {
+      console.log("Please select an option");
+    }
   }
 
   nextQuestion() {

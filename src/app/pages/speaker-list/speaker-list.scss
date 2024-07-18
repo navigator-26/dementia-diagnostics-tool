@@ -3,6 +3,12 @@
 
   flex-direction: column;
 }
+.feeds-container {
+  background: #F4F1EC;
+}
+.primary-clr {
+  color : #6F4E37;
+}
 
 /* Due to the fact the cards are inside of columns the margins don't overlap
  * properly so we want to remove the extra margin between cards

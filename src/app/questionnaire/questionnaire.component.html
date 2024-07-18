@@ -1,33 +1,30 @@
 <ion-header>
-    <ion-toolbar>
-      <ion-title>Image Questionnaire</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="" class="primary-clr" defaultHref="/landing"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="primary-clr">
+      Standardized Assessment
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
   
-  <ion-content class="ion-padding">
-    <ion-img src="assets/images/your-image.png"></ion-img>
-  
-    <h2>{{ currentQuestion }}</h2>
-  
-    <ion-list>
-      <ion-radio-group (ionChange)="onAnswerSelect($event)">
-        <ion-item *ngFor="let option of currentOptions">
-          <ion-label>{{ option.label }}</ion-label>
-          <ion-radio slot="start" [value]="option.value"></ion-radio>
-        </ion-item>
-      </ion-radio-group>
-    </ion-list>
-  
-    <ion-button (click)="prevQuestion()" [disabled]="isFirstQuestion">Previous</ion-button>
-    <ion-button (click)="nextQuestion()" [disabled]="isLastQuestion">Next</ion-button>
-  
-    <ion-progress-bar [value]="currentQuestionIndex / questions.length"></ion-progress-bar>
-  
-    <ion-alert
-    *ngIf="showFeedback"
-    header="Feedback"
-    message="{{ feedbackMessage }}"
-    buttons="['OK']">
-  </ion-alert>
-  </ion-content>
+<ion-content class="ion-padding stretch-content">
+  <ion-img class="padding-bottom" src="assets/img/cookie-theft.png"></ion-img>
+  <h2 class="primary-text">{{ currentQuestion }}</h2>
+  <ion-list>
+    <ion-radio-group (ionChange)="onAnswerSelect($event)">
+      <ion-item *ngFor="let option of currentOptions">
+        <ion-label class="secondary-text">{{ option.label }}  {{  option.value}}</ion-label>
+        <ion-radio slot="start" [value]="option.value"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+  <div class="button-row">
+    <ion-button class="action-btn" fill="clear" (click)="prevQuestion()" [disabled]="isFirstQuestion" [hidden]="isLastQuestion">Previous</ion-button>
+    <ion-button class="action-btn" fill="clear" (click)="nextQuestion()" [hidden]="isLastQuestion">Next</ion-button>
+    <ion-button class="action-btn" fill="clear" (click)="getConsent()" [hidden]="!isLastQuestion">Submit</ion-button>
+    <ion-progress-bar class="custom-progress-bar" [value]="currentQuestionIndex / questions.length"></ion-progress-bar>
+  </div>
+</ion-content>
   
