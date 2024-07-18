@@ -28,7 +28,7 @@ export class MapPage implements AfterViewInit {
     }
 
   async ionViewWillEnter() {
-    this.coordinates = Geolocation.getCurrentPosition();
+    //this.coordinates = Geolocation.getCurrentPosition();
     const appEl = this.doc.querySelector('ion-app');
     let isDark = false;
     let style = [];
