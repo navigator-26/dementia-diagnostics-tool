@@ -2,6 +2,11 @@
 
     "feeds": [
         {
+            "title":"Factors associated with burden among male caregivers for people with dementia",
+            "description":"",
+            "link":"https://journals.lww.com/jcma/fulltext/2022/04000/factors_associated_with_burden_among_male.8.aspx"
+        },
+        {
             "title" : "Living with dementia",
             "description": "Information and support to help you live well with dementia – from keeping safe and dealing with stigma to assistive tech and communication tips.",
             "link": "https://www.dementiauk.org/information-and-support/living-with-dementia/"
@@ -14,12 +19,6 @@
 
         },
         {
-            "title": "Caregiver Training",
-            "description": "Caregiver Training: Refusal to Bathe | UCLA Alzheimer's and Dementia Care",
-            "url": "https://www.youtube.com/embed/-rB5-AkqpjQ?si=cBjDDaCGwUS2e1xL"
-
-        },
-        {
             "title":"Resources",
              "description": "Information and resources for carers, parents, children and teachers and support for your employees and customers.",
             "link": "https://www.dementiauk.org/information-and-support/resources/"
@@ -28,6 +27,17 @@
             "title":"The Tender Rose Dementia Care Blog",
             "description": "The Tender Rose Dementia Care Blog",
             "link":"https://www.tenderrose.com/blog"
+        },
+        {
+            "title":"The Male Face of Caregiving: A Scoping Review of Men Caring for a Person With Dementia",
+            "description":"",
+            "link":"https://journals.sagepub.com/doi/full/10.1177/1557988313519671"
+        },
+        {
+            "title": "Walk 50 Miles in June",
+            "description": "Step out on a mission this June and walk 50 miles for families facing dementia.",
+            "image": "../img/walk-50webp",
+            "link": "https://www.dementiauk.org/get-involved/find-your-event/walk-50-miles/"
         }
 
 
