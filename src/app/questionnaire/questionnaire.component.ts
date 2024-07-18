@@ -1,4 +1,6 @@
+import { HttpClient} from '@angular/common/http';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 
 interface Question {
@@ -16,8 +18,9 @@ export class QuestionnaireComponent {
   showFeedback = false;
   feedbackMessage : Array<string> = [];
 
-  constructor(private alertController: AlertController) {
-
+  constructor(private alertController: AlertController,
+    public httpClient: HttpClient,public router:Router) {
+      
   }
 
   questions: Question[] = [
@@ -113,6 +116,7 @@ export class QuestionnaireComponent {
           text: 'No',
           role: 'cancel',
           handler: () => {
+            this.router.navigateByUrl(`/app/tabs/welcome`);
             console.log('User canceled the submission');
           }
         },
@@ -173,7 +177,28 @@ export class QuestionnaireComponent {
   submitQuestionnaire() {
     let res = this.feedbackMessage.join("");
     console.log(res);
+    this.sendPostRequest(res);
+
     //api call integration here
     //redirect to result screen
+  }
+
+  sendPostRequest(res) {
+    
+    let httpHeaders:any = {
+    'X-IBM-Client-Id':'3f93d54f8e62c14653cbac62b9652792',
+    'X-IBM-Client-Secret':'c170e3ccb4f9c72cc9a586134d931e70'
+  };
+    
+    let body =  new FormData();
+    body.append('text',JSON.stringify(res))
+
+    this.httpClient.post("https://api.ibm.com/digitalhealth/run/api/v1/mmse/text/prediction", body, {headers: httpHeaders})
+      .subscribe(data => {
+        console.log(data['_body']);
+        this.router.navigate(['recommendations']);
+       }, error => {
+        console.log(error);
+      });
   }
 }
