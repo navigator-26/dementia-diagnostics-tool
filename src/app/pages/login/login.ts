@@ -38,8 +38,8 @@ export class LoginPage {
   // }
 
   openWelcomePage() {
-    // this.router.navigateByUrl(`/app/tabs/welcome`);
-    this.router.navigateByUrl(`/app/tabs/recommendations`);
+    this.router.navigateByUrl(`/app/tabs/welcome`);
+    //this.router.navigateByUrl(`/app/tabs/recommendations`);
   }
 
   // openWelcomePage(event: Event) {
