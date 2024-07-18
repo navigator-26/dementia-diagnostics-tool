@@ -4,6 +4,10 @@ ion-menu ion-content {
   --background: var(--ion-item-background, var(--ion-background-color, #ffffff));
 }
 
+ion-tab-button {
+    color: #6F4E37 !important;
+}
+
 /* Remove background transitions for switching themes */
 ion-menu ion-item {
   --transition: none;
