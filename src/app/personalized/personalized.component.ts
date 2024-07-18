@@ -75,10 +75,11 @@ export class PersonalizedComponent {
   }
 
   submitQuestionnaire() {
+    this.questionerData.finalScore = this.currentScore;
   //  let res = this.selectedAnswers.join("");
   //  console.log(res);
    // this.sendPostRequest(res);
-
+    this.router.navigateByUrl('/app/tabs/recommendations');
     //api call integration here
     //redirect to result screen
   }

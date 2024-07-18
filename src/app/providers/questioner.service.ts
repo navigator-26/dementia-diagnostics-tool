@@ -10,7 +10,7 @@ import { UserData } from './user-data';
 })
 export class QuestionerData {
   data: any;
-
+  finalScore: number = 0;
   constructor(public http: HttpClient, public user: UserData) {}
 
   load(): any {
