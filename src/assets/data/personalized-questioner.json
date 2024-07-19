@@ -234,9 +234,160 @@
             ],
             "score":2,
             "correctAnswer": "Volkswagen"
-        }
+        },
+        {
+            "question": " Hello Buddy, May I know your name please?",
+            "options": [
+                {
+                    "label": "A.",
+                    "value": "Peter"
+                },
+                {
+                    "label": "B.",
+                    "value": "John"
+                },
+                {
+                    "label": "C.",
+                    "value": "Nick"
+                }
+            ],
+            "score":1,
+            "correctAnswer": "John"
 
- 
+        },
+        {
+            "question": "How many family members do you have? ",
+            "options": [
+                {
+                    "label": "A.",
+                    "value": "5"
+                },
+                {
+                    "label": "B.",
+                    "value": "3"
+                },
+                {
+                    "label": "C.",
+                    "value": "2"
+                }
+            ],
+            "score":1,
+            "correctAnswer": "5"
+
+        },
+        {
+            "question": "Hi John, where do you stay? ",
+            "options": [
+                {
+                    "label": "A.",
+                    "value": "Delhi"
+                },
+                {
+                    "label": "B.",
+                    "value": "London"
+                },
+                {
+                    "label": "C.",
+                    "value": "Bristola"
+                }
+            ],
+            "score":1,
+            "correctAnswer": "Bristola"
+
+        },
+        {
+            "question": "Can you name any nearby street of your house?",
+            "options": [
+                {
+                    "label": "A.",
+                    "value": "Albany street"
+                },
+                {
+                    "label": "B.",
+                    "value": "Abbey Street"
+                },
+                {
+                    "label": "C.",
+                    "value": "Broad Street"
+                }
+            ],
+            "score":1,
+            "correctAnswer": "Albany street"
+
+        },
+        {
+            "question": "What is your blood group ? ",
+            "options": [
+                {
+                    "label": "A.",
+                    "value": "A+ve"
+                },
+                {
+                    "label": "B.",
+                    "value": "B+ve"
+                },
+                {
+                    "label": "C.",
+                    "value": "O+ve"
+                }
+            ],
+            "score":1,
+            "correctAnswer": "B+ve"
+
+        },
+        {
+            "question": "Are you married?  ",
+            "options": [
+                {
+                    "label": "A.",
+                    "value": "No"
+                },
+                {
+                    "label": "B.",
+                    "value": "Yes"
+                }
+            ],
+            "score":1,
+            "correctAnswer": "Yes"
+        },
+        {
+            "question": "How many kids do you have? ",
+            "options": [
+                {
+                    "label": "A.",
+                    "value": "1"
+                },
+                {
+                    "label": "B.",
+                    "value": "3"
+                },
+                {
+                    "label": "B.",
+                    "value": "5"
+                }
+            ],
+            "score":1,
+            "correctAnswer": "5"
+        },
+        {
+            "question": "What is the name of your pet? ",
+            "options": [
+                {
+                    "label": "A.",
+                    "value": "Bravo"
+                },
+                {
+                    "label": "B.",
+                    "value": "Bruno"
+                },
+                {
+                    "label": "B.",
+                    "value": "Luci"
+                }
+            ],
+            "score":1,
+            "correctAnswer": "Luci"
+        } 
     ]
 }
 

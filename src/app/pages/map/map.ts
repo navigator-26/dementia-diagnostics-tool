@@ -42,20 +42,60 @@ export class MapPage implements AfterViewInit {
 
     let map;
     Geolocation.getCurrentPosition().then((location)=>{
-      console.log('location',location);
+
+      
       const mapEle = this.mapElement.nativeElement;
       const coordinates = {
         lat: location.coords.latitude,
         lng: location.coords.longitude
       };
-      map = new googleMaps.Map(mapEle, {
-        center: coordinates,
-        zoom: 16,
-        styles: style
-      });
+     
 
-      googleMaps.event.addListenerOnce(map, 'idle', () => {
-        mapEle.classList.add('show-map');
+      this.confData.getMap().subscribe((mapData: any) => {
+        const mapEle = this.mapElement.nativeElement;
+  
+        map = new googleMaps.Map(mapEle, {
+          center: coordinates,
+          zoom: 16,
+          styles: style
+        });
+        
+        mapData.forEach((markerData: any) => {
+          const infoWindow = new googleMaps.InfoWindow({
+            content: `<h5>${markerData.name}</h5>`
+          });
+  
+          const marker = new googleMaps.Marker({
+            position: markerData,
+            map,
+            title: markerData.name
+          });
+  
+          marker.addListener('click', () => {
+            infoWindow.open(map, marker);
+          });
+        });
+  
+        googleMaps.event.addListenerOnce(map, 'idle', () => {
+          mapEle.classList.add('show-map');
+        });
+      });
+  
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (mutation.attributeName === 'class') {
+            const el = mutation.target as HTMLElement;
+            isDark = el.classList.contains('ion-palette-dark');
+            if (map && isDark) {
+              map.setOptions({styles: darkStyle});
+            } else if (map) {
+              map.setOptions({styles: []});
+            }
+          }
+        });
+      });
+      observer.observe(appEl, {
+        attributes: true
       });
 
     });

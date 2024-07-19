@@ -11,6 +11,8 @@ import { UserData } from './user-data';
 export class QuestionerData {
   data: any;
   finalScore: number = 0;
+  standardizeFinalScore:any;
+  selectedQuestioner: string= '';
   constructor(public http: HttpClient, public user: UserData) {}
 
   load(): any {

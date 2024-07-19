@@ -2,6 +2,7 @@ import { HttpClient} from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
+import { QuestionerData } from '../providers/questioner.service'
 
 interface Question {
   question: string;
@@ -21,7 +22,7 @@ export class QuestionnaireComponent {
   feedbackMessage : Array<string> = [];
 
   constructor(private alertController: AlertController,
-    public httpClient: HttpClient,public router:Router) {
+    public httpClient: HttpClient,public router:Router, public questionerData: QuestionerData) {
       
   }
 
@@ -201,7 +202,8 @@ export class QuestionnaireComponent {
     this.httpClient.post("https://api.ibm.com/digitalhealth/run/api/v1/mmse/text/prediction", body, {headers: httpHeaders})
       .subscribe(data => {
         this.isLoading = false;
-        console.log(data['_body']);
+        console.log('here',data)
+        this.questionerData.standardizeFinalScore = data;
         this.router.navigateByUrl('/app/tabs/recommendations');
        }, error => {
         this.isLoading = false;

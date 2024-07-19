@@ -405,20 +405,20 @@
 
   "map": [
     {
-      "name": "Monona Terrace Convention Center",
-      "lat": 43.071584,
-      "lng": -89.38012,
+      "name": "Tapas Elder Care, Wakad",
+      "lat": 18.552746,
+      "lng": 73.806877,
       "center": true
     },
     {
-      "name": "Ionic HQ",
-      "lat": 43.074395,
-      "lng": -89.381056
+      "name": "VGoldenge: Dementia Care Center",
+      "lat": 18.523456,
+      "lng": 73.745512
     },
     {
-      "name": "Afterparty - Brocach Irish Pub",
-      "lat": 43.07336,
-      "lng": -89.38335
+      "name": "Chaitanya Mental Health Care Center",
+      "lat": 18.453556,
+      "lng": 73.891899
     }
   ],
 

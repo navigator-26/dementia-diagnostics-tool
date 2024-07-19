@@ -2,7 +2,7 @@ import { AfterViewInit, Component } from '@angular/core';
 import { UserData } from '../../providers/user-data';
 import { AnimationController } from '@ionic/angular';
 import { ActivatedRoute } from '@angular/router';
-
+import { QuestionerData } from '../../providers/questioner.service'
 @Component({
   selector: 'page-welcome',
   templateUrl: 'welcome.html',
@@ -14,7 +14,7 @@ export class WelcomePage implements AfterViewInit {
   // constructor(public userData: UserData) {}
   
   
-  constructor(public userData: UserData, private route: ActivatedRoute) {}
+  constructor(public userData: UserData, private route: ActivatedRoute, public questionerData:QuestionerData) {}
 
   ngOnInit() {
     // this.username = this.route.snapshot.paramMap.get('username');
@@ -34,5 +34,10 @@ export class WelcomePage implements AfterViewInit {
     this.userData.getUsername().then((username) => {
       this.username = username;
     });
+  }
+
+  setQuestioner(type) {
+    this.questionerData.selectedQuestioner = type;
+
   }
 }

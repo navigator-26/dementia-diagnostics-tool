@@ -20,8 +20,8 @@
     </div>
     <div class="primary-clr margin-top">Choose one</div>
     <div class="button-row">
-        <ion-button class="action-btn" fill="clear" expand="full" routerLink="/questionnaire">Standardized</ion-button>
-        <ion-button class="action-btn" fill="clear" expand="full" routerLink="/personalized">Personalized</ion-button>
+        <ion-button class="action-btn" fill="clear" expand="full" (click)="setQuestioner('Standardized')" routerLink="/questionnaire">Standardized</ion-button>
+        <ion-button class="action-btn" fill="clear" expand="full"  (click)="setQuestioner('Personalized')" routerLink="/personalized">Personalized</ion-button>
     </div>
   </div>
 </ion-content>

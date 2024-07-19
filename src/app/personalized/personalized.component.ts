@@ -14,6 +14,7 @@ export class PersonalizedComponent {
   selectedAnswers:any = [];
   showFeedback = false;
   currentScore = 0;
+  loading = false;
   constructor(private alertController: AlertController,
     public httpClient: HttpClient,public router:Router, public questionerData: QuestionerData, ) {
 
@@ -75,7 +76,10 @@ export class PersonalizedComponent {
   }
 
   submitQuestionnaire() {
+    this.loading = true;
     this.questionerData.finalScore = this.currentScore;
+
+    this.loading = false;
   //  let res = this.selectedAnswers.join("");
   //  console.log(res);
    // this.sendPostRequest(res);

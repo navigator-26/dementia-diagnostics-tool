@@ -8,8 +8,8 @@
       </ion-title>
     </ion-toolbar>
   </ion-header>
-    
   <ion-content class="ion-padding stretch-content" *ngIf="questions.length > 0">
+   
     <!-- <ion-img class="padding-bottom" src="assets/img/cookie-theft.png"></ion-img> -->
     <ion-progress-bar class="custom-progress-bar" [value]="currentQuestionIndex / questions.length"></ion-progress-bar>
     <h2 class="primary-text">{{ currentQuestion }}</h2>
@@ -24,7 +24,7 @@
     <div class="button-row">
       <ion-button class="action-btn" fill="clear" (click)="prevQuestion()" [disabled]="isFirstQuestion" [hidden]="isLastQuestion">Previous</ion-button>
       <ion-button class="action-btn" fill="clear" (click)="nextQuestion()" [hidden]="isLastQuestion">Next</ion-button>
-      <ion-checkbox [hidden]="!isLastQuestion"></ion-checkbox><span [hidden]="!isLastQuestion"> I agree to the terms and conditions</span>
+      <!-- <ion-checkbox [hidden]="!isLastQuestion"></ion-checkbox><span [hidden]="!isLastQuestion"> I agree to the terms and conditions</span> -->
       <ion-button class="action-btn submit-btn" fill="clear" (click)="submitQuestionnaire()" [hidden]="!isLastQuestion">Submit</ion-button>
     </div>
   </ion-content>

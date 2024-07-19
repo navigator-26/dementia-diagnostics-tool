@@ -9,16 +9,11 @@
   </ion-header>
 
   <ion-content fullscreen class="page">
+    
     <div class = "recommendation-container">
-    <h3 class="ion-padding-top ion-padding-start">Result</h3>
-
-    <p class="ion-padding-start ion-padding-end">
-       Dummy text will come here
-    </p>
-
-    <h3 class="ion-padding-top ion-padding-start">Details</h3>
-    <round-progress
-    [current]="current"
+    <h3 class="ion-padding-top ion-padding-start">Your Score</h3>
+    <round-progress *ngIf="score"
+    [current]="score"
     [max]="max"
     [color]="gradient ? 'url(#gradient)' : color"
     [background]="background"
@@ -32,28 +27,29 @@
     [animation]="animation"
     [animationDelay]="animationDelay"/>
 
-
-    <!-- Here we will showcase recommendation as per result..... it will be dynamic from backend -->
-    <ion-list lines="none">
-      <ion-item>
-        <ion-select label="Location" [(ngModel)]="location" [interfaceOptions]="selectOptions">
-          <ion-select-option value="madison">Madison, WI</ion-select-option>
-          <ion-select-option value="austin">Austin, TX</ion-select-option>
-          <ion-select-option value="chicago">Chicago, IL</ion-select-option>
-          <ion-select-option value="seattle">Seattle, WA</ion-select-option>
-        </ion-select>
+    <ion-list *ngIf="score">
+      <ion-item>Inferences: </ion-item>
+      <ion-item *ngIf="score <= 3">
+        <ul>
+          <li *ngFor="let recommendation of recommendationArray.recommendation.high">
+            {{recommendation}}
+          </li>
+        </ul>
       </ion-item> 
-       <ion-item button="true" id="open-date-input">
-        <ion-label>
-          Date
-        </ion-label>
-        <ion-text slot="end">{{ conferenceDate | date: 'mediumDate' }}</ion-text>
-        <ion-popover id="date-input-popover" trigger="open-date-input" [showBackdrop]="false" side="top" alignment="end">
-          <ng-template>
-            <ion-datetime max="2056" [(ngModel)]="conferenceDate" presentation="date"></ion-datetime>
-          </ng-template>
-        </ion-popover>
-      </ion-item>
-    </ion-list> 
+      <ion-item *ngIf="score > 3 && score <= 18">
+        <ul>
+          <li *ngFor="let recommendation of recommendationArray.recommendation.medium">
+            {{recommendation}}
+          </li>
+        </ul>
+      </ion-item> 
+    <ion-item *ngIf="score > 18 && score <= 30">
+      <ul>
+        <li *ngFor="let recommendation of recommendationArray.recommendation.no_impact">
+          {{recommendation}}
+        </li>
+      </ul>
+    </ion-item> 
+  </ion-list> 
   </div>
 </ion-content>
