@@ -8,6 +8,14 @@ ion-toolbar {
   left: 0;
 }
 
+ul {
+  padding-left: 0px !important;
+}
+
+h3,p{
+  color:#6F4E37 !important;
+}
+
 ion-toolbar ion-button,
 ion-toolbar ion-back-button,
 ion-toolbar ion-menu-button {

@@ -11,7 +11,7 @@
   <ion-content fullscreen class="page">
     
     <div class = "recommendation-container">
-    <h3 class="ion-padding-top ion-padding-start">Your Score</h3>
+    <h3 class="ion-padding-top ion-padding-start primary-text">Your Score</h3>
     <round-progress
     [current]="score"
     [max]="max"
@@ -29,7 +29,7 @@
     <p>{{score}}/{{max}}</p>
 
     <ion-list >
-      <ion-item>Inferences: </ion-item>
+      <ion-item class="primary-clr">Inferences: </ion-item>
       <ion-item *ngIf="score <= 3">
         <ul>
           <li *ngFor="let recommendation of recommendationArray.recommendation.high">
@@ -39,7 +39,7 @@
       </ion-item> 
       <ion-item *ngIf="score > 3 && score <= 18">
         <ul>
-          <li *ngFor="let recommendation of recommendationArray.recommendation.medium">
+          <li class="primary-clr" *ngFor="let recommendation of recommendationArray.recommendation.medium">
             {{recommendation}}
           </li>
         </ul>
@@ -47,16 +47,16 @@
     <ion-item *ngIf="score > 18 && score <= 30">
      
       <ul>
-        <span>You are healthy, continue practising below to keep up the good health.</span>
-        <li *ngFor="let recommendation of recommendationArray.recommendation.no_impact">
+        <h5 class="primary-clr">You are healthy, continue practising below to keep up the good health.</h5>
+        <li class="primary-clr" *ngFor="let recommendation of recommendationArray.recommendation.no_impact">
           {{recommendation}}
         </li>
       </ul>
     </ion-item> 
   </ion-list> 
 
-  <p *ngIf="questionerData.selectedQuestioner === 'Standardized'">Would you like to go for <a routerLink="/personalized">Personalized test</a> ?</p>
-  <p *ngIf="questionerData.selectedQuestioner === 'Personalized'">Would you like to go for <a routerLink="/questionnaire">Standardized test</a> ?</p>
+  <p class="primary-clr" *ngIf="questionerData.selectedQuestioner === 'Standardized'">Would you like to go for <a routerLink="/personalized">Personalized test</a> ?</p>
+  <p class="primary-clr" *ngIf="questionerData.selectedQuestioner === 'Personalized'">Would you like to go for <a routerLink="/questionnaire">Standardized test</a> ?</p>
 
   </div>
 

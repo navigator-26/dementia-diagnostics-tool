@@ -12,7 +12,14 @@
   
   <ion-img class="padding-bottom" src="assets/img/cookie-theft.png"></ion-img>
   <ion-progress-bar class="custom-progress-bar" [value]="currentQuestionIndex / questions.length"></ion-progress-bar>
+<<<<<<< Updated upstream
   <h2 class="primary-text">Q.{{currentQuestionIndex+1}} {{ currentQuestion }}</h2>
+=======
+  <div class="question-container">
+    <h2 class="primary-text">{{ currentQuestion }}</h2>
+    <div class=" ion--speakerphone"></div>
+  </div>
+>>>>>>> Stashed changes
   <ion-list>
     <ion-radio-group (ionChange)="onAnswerSelect($event)">
       <ion-item *ngFor="let option of currentOptions">
@@ -25,7 +32,7 @@
     <ion-button class="action-btn" fill="clear" (click)="prevQuestion()" [disabled]="isFirstQuestion" [hidden]="isLastQuestion">Previous</ion-button>
     <ion-button class="action-btn" fill="clear" (click)="nextQuestion()" [hidden]="isLastQuestion">Next</ion-button>
     <ion-item [hidden]="!isLastQuestion">
-      <ion-label>Provide your consent to share this information to a third party API</ion-label>
+      <ion-label class="primary-text">Provide your consent to share this information to a third party API</ion-label>
       <ion-checkbox slot="start" (ionChange)="onConsentChange($event)"></ion-checkbox>
     </ion-item>
     <ion-button class="action-btn submit-btn" fill="clear" (click)="submitQuestionnaire()" [disabled]="!userConsent || isLoading" [hidden]="!isLastQuestion">Submit</ion-button>

@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'ionic.conference.app',
-  appName: 'ionic-conference-app',
+  appId: 'com.ionicframework.conferenceapp',
+  appName: 'dementia-diagnostics-tool',
   webDir: 'www',
   bundledWebRuntime: false,
   plugins: {

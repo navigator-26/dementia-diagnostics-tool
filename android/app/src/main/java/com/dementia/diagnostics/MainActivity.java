@@ -1,4 +1,4 @@
-package com.dementia.diagnostics;
+package com.ionicframework.conferenceapp;
 
 import com.getcapacitor.BridgeActivity;
 
