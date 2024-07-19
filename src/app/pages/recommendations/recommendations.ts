@@ -68,7 +68,7 @@ export class RecommendationsPage {
   realCurrent = 0;
 
   recommendations:any = [];
-  score: any;
+  score: any = 0;
 
   recommendationArray = {
     "recommendation": {
@@ -110,7 +110,7 @@ export class RecommendationsPage {
   }
 
 
-  ionViewWillEnter() {
+  ionViewDidEnter() {
   this.getFinalScore();
   }
 

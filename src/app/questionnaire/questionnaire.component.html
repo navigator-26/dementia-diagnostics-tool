@@ -12,7 +12,7 @@
   
   <ion-img class="padding-bottom" src="assets/img/cookie-theft.png"></ion-img>
   <ion-progress-bar class="custom-progress-bar" [value]="currentQuestionIndex / questions.length"></ion-progress-bar>
-  <h2 class="primary-text">{{ currentQuestion }}</h2>
+  <h2 class="primary-text">Q.{{currentQuestionIndex+1}} {{ currentQuestion }}</h2>
   <ion-list>
     <ion-radio-group (ionChange)="onAnswerSelect($event)">
       <ion-item *ngFor="let option of currentOptions">
