@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { IonModal } from '@ionic/angular';
 import { OverlayEventDetail } from '@ionic/core/components';
 import { ChatbotService } from '../../providers/chatbot.service';
+import { Router } from '@angular/router';
 
 @Component({
   templateUrl: 'tabs-page.html'
@@ -9,12 +10,12 @@ import { ChatbotService } from '../../providers/chatbot.service';
 export class TabsPage {
   @ViewChild(IonModal) modal: IonModal;
 
-  messages: any = [{type: 'sent', text: "Are you looking for caregiver advice?"}];
+  messages: any = [{type: 'sent', text: "Hello, Hope you are doing good! I am here to help you today! Please select any one option from below.Do you need help for using this app?"}];
 
  // messages: Array<{ sender: string, text: string }> = [];
 
   
-  constructor(private chatbotService: ChatbotService) {}
+  constructor(private chatbotService: ChatbotService, private router: Router,) {}
 
   cancel() {
     this.modal.dismiss(null, 'cancel');
@@ -43,31 +44,62 @@ export class TabsPage {
       this.messages.push({type: 'sent', text:[ 
         {"option": "Yes"},
         {"option": "No"}
+
       ]} );
     }
 
-
-
     if(index === 1) {
       if(message === "Yes") {
-        this.messages.push({type: 'sent', text:"I'm happy to help. I'm Angela, your virtual advisor. What would you like to do today?"});
+        this.messages.push({type: 'sent', text:[ 
+          {"option": "Standardised"},
+          {"option": "Personalised"}
+  
+        ]});
       } else {
-        this.messages.push({type: 'sent', text:"Thank you"});
+        this.messages.push({type: 'sent', text:"All right.Would you like to listen to some good music?"});
         
       }
     }
 
     if(index === 2) {
-      if(message === "I'm happy to help. I'm Angela, your virtual advisor. What would you like to do today?") {
-        this.messages.push({type: 'sent', text:[ 
-          {"option": "Decide if it's time for senior care"},
-          {"option": "Decide if it's time for senior care"}
-        ]});
+      if(message === "Standardised") {
+        this.modal.dismiss(null, 'cancel');
+        this.router.navigateByUrl('/questionnaire');
+      } else if(message === "Personalised") {
+        this.modal.dismiss(null, 'cancel');
+        this.router.navigateByUrl('/personalized');
       } else {
-        this.messages.push({type: 'sent', text:"Thank you"});
-        
+        this.messages.push({type: 'sent', text:"https://www.youtube.com/watch?v=vxaotJE1K-s"});
       }
+     
     }
+
+
+
+    // if(index === 2) {
+    //   if(message === "Yes") {
+    //     this.messages.push({type: 'sent', text:[ 
+    //       {"option": "Standardised"},
+    //       {"option": "Personalised"}
+  
+    //     ]});
+    //   } else {
+    //     this.messages.push({type: 'sent', text:"All right.Would you like to listen to some good music?"});
+        
+    //   }
+    // }
+
+    // if(index === 2) {
+    //   if(message === "I'm happy to help. I'm Angela, your virtual advisor. What would you like to do today?") {
+    //     this.messages.push({type: 'sent', text:[ 
+    //       {"option": "Decide if it's time for senior care"},
+    //       {"option": "Decide if it's time for senior care"}
+    //     ]});
+    //   } else {
+    //     this.messages.push({type: 'sent', text:"Thank you"});
+        
+    //   }
+    // }
   }
 
   // async sendMessage(userMessage : string | undefined) {
