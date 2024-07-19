@@ -87,7 +87,7 @@ export class RecommendationsPage {
 "Psychological health(e.g participating in personally meaningful activities such as playing music)"
       ],
       "no_impact":[
-        "You are healthy, continue practising below to keep up the good health.",
+        
 
 "Physical exercise",
 "Healthy Diet",
@@ -121,6 +121,10 @@ export class RecommendationsPage {
     } else {
       this.score = this.questionerData.finalScore;
     }
+  }
+
+  getRecommenedTest() {
+    return this.questionerData.selectedQuestioner === 'Standardized' ? 'Personalized' : "Standardized";
   }
 
 }

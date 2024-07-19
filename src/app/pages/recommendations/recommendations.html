@@ -12,7 +12,7 @@
     
     <div class = "recommendation-container">
     <h3 class="ion-padding-top ion-padding-start">Your Score</h3>
-    <round-progress *ngIf="score"
+    <round-progress
     [current]="score"
     [max]="max"
     [color]="gradient ? 'url(#gradient)' : color"
@@ -26,8 +26,9 @@
     [duration]="duration"
     [animation]="animation"
     [animationDelay]="animationDelay"/>
+    <p>{{score}}/{{max}}</p>
 
-    <ion-list *ngIf="score">
+    <ion-list >
       <ion-item>Inferences: </ion-item>
       <ion-item *ngIf="score <= 3">
         <ul>
@@ -44,12 +45,20 @@
         </ul>
       </ion-item> 
     <ion-item *ngIf="score > 18 && score <= 30">
+     
       <ul>
+        <span>You are healthy, continue practising below to keep up the good health.</span>
         <li *ngFor="let recommendation of recommendationArray.recommendation.no_impact">
           {{recommendation}}
         </li>
       </ul>
     </ion-item> 
   </ion-list> 
+
+  <p *ngIf="questionerData.selectedQuestioner === 'Standardized'">Would you like to go for <a routerLink="/personalized">Personalized test</a> ?</p>
+  <p *ngIf="questionerData.selectedQuestioner === 'Personalized'">Would you like to go for <a routerLink="/questionnaire">Standardized test</a> ?</p>
+
   </div>
+
+ 
 </ion-content>

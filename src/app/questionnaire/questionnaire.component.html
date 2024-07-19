@@ -25,7 +25,7 @@
     <ion-button class="action-btn" fill="clear" (click)="prevQuestion()" [disabled]="isFirstQuestion" [hidden]="isLastQuestion">Previous</ion-button>
     <ion-button class="action-btn" fill="clear" (click)="nextQuestion()" [hidden]="isLastQuestion">Next</ion-button>
     <ion-item [hidden]="!isLastQuestion">
-      <ion-label>Do you consent to share your questionnaire data with a 3rd party api ?</ion-label>
+      <ion-label>Provide your consent to share this information to a third party API</ion-label>
       <ion-checkbox slot="start" (ionChange)="onConsentChange($event)"></ion-checkbox>
     </ion-item>
     <ion-button class="action-btn submit-btn" fill="clear" (click)="submitQuestionnaire()" [disabled]="!userConsent || isLoading" [hidden]="!isLastQuestion">Submit</ion-button>

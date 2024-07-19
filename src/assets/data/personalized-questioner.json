@@ -1,58 +1,120 @@
 {
     "questions": [
         {
-            "question": "Do you have any severe allergies? ",
+            "question": " Hello Buddy, May I know your name please?",
             "options": [
                 {
                     "label": "A.",
-                    "value": "Yes"
+                    "value": "Peter"
                 },
                 {
                     "label": "B.",
-                    "value": "No"
-                }
-            ],
-            "score":4,
-            "correctAnswer": "No"
-        },
-        {
-            "question": "What’s your kid’s favourite food dish?  ",
-            "options": [
-                {
-                    "label": "A.",
-                    "value": "Burger"
-                },
-                {
-                    "label": "B.",
-                    "value": "Burrito"
+                    "value": "John"
                 },
                 {
                     "label": "C.",
-                    "value": "Chips"
+                    "value": "Nick"
                 }
             ],
-            "score":4,
-            "correctAnswer": "Burrito"
+            "score":1,
+            "correctAnswer": "John"
+
         },
         {
-            "question": "What’s your spouse’s favourite color ? ",
+            "question": "How many family members do you have? ",
             "options": [
                 {
                     "label": "A.",
-                    "value": "Blue"
+                    "value": "5"
                 },
                 {
                     "label": "B.",
-                    "value": "Red"
+                    "value": "3"
                 },
                 {
                     "label": "C.",
-                    "value": "Green"
+                    "value": "2"
                 }
             ],
-            "score":4,
-            "correctAnswer": "Blue"
+            "score":1,
+            "correctAnswer": "5"
+
         },
+        {
+            "question": "Hi John, where do you stay? ",
+            "options": [
+                {
+                    "label": "A.",
+                    "value": "Delhi"
+                },
+                {
+                    "label": "B.",
+                    "value": "London"
+                },
+                {
+                    "label": "C.",
+                    "value": "Bristol"
+                }
+            ],
+            "score":1,
+            "correctAnswer": "Bristol"
+
+        },
+        
+        {
+            "question": "What was your profession, was it business or a job ?",
+            "options": [
+                {
+                    "label": "A.",
+                    "value": "Job"
+                },
+                {
+                    "label": "B.",
+                    "value": "Business"
+                }
+            ],
+            "score":2,
+            "correctAnswer": "Job"
+        },
+        {
+            "question": "How do you like to spend your leisure time (hobby)?",
+            "options": [
+                {
+                    "label": "A.",
+                    "value": "Gardening"
+                },
+                {
+                    "label": "B.",
+                    "value": "Reading books"
+                },
+                {
+                    "label": "C.",
+                    "value": "Squash"
+                }
+            ],
+            "score":2,
+            "correctAnswer": "Gardening"
+        },
+        {
+            "question": "Do you remember which was the brand of your very first car you owned?",
+            "options": [
+                {
+                    "label": "A.",
+                    "value": "Volkswagen"
+                },
+                {
+                    "label": "B.",
+                    "value": "Audi"
+                },
+                {
+                    "label": "C.",
+                    "value": "Tesla"
+                }
+            ],
+            "score":2,
+            "correctAnswer": "Volkswagen"
+        },
+        
         {
             "question": "Do you have any investment plans for your kids/spouse?",
             "options": [
@@ -107,287 +169,58 @@
             "correctAnswer": "University of London"
         },
         {
-            "question": "Hey what is your favourite dish ? ",
+            "question": "Do you have any severe allergies? ",
             "options": [
                 {
                     "label": "A.",
-                    "value": "Shepherd's Pie"
-                },
-                {
-                    "label": "B.",
-                    "value": "Beef Wellington"
-                },
-                {
-                    "label": "C.",
-                    "value": "Fish and Chips"
-                }
-            ],
-            "score":2,
-            "correctAnswer": "Shepherd's Pie"
-        },
-        {
-            "question": "Which television show you like watching the most ?",
-            "options": [
-                {
-                    "label": "A.",
-                    "value": "The Big Bang Theory"
-                },
-                {
-                    "label": "B.",
-                    "value": "F.R.I.E.N.D.S."
-                },
-                {
-                    "label": "C.",
-                    "value": "The Suits "
-                }
-            ],
-            "score":2,
-            "correctAnswer": "F.R.I.E.N.D.S."
-        },
-        {
-            "question": "What was your profession, was it business or a job ?",
-            "options": [
-                {
-                    "label": "A.",
-                    "value": "Job"
-                },
-                {
-                    "label": "B.",
-                    "value": "Business"
-                }
-            ],
-            "score":2,
-            "correctAnswer": "Job"
-        },
-        {
-            "question": "How do you like to spend your leisure time (hobby)?",
-            "options": [
-                {
-                    "label": "A.",
-                    "value": "Gardening"
-                },
-                {
-                    "label": "B.",
-                    "value": "Reading books"
-                },
-                {
-                    "label": "C.",
-                    "value": "Squash"
-                }
-            ],
-            "score":2,
-            "correctAnswer": "Gardening"
-        },
-        {
-            "question": "Out of all the places you have travelled so far, which is your most loved one?",
-            "options": [
-                {
-                    "label": "A.",
-                    "value": "Scotland"
-                },
-                {
-                    "label": "B.",
-                    "value": "Paris"
-                },
-                {
-                    "label": "C.",
-                    "value": "San Fransico"
-                }
-            ],
-            "score":2,
-            "correctAnswer": "Paris"
-        },
-        {
-            "question": "Where do you keep your car keys usually?",
-            "options": [
-                {
-                    "label": "A.",
-                    "value": "Wadrobe"
-                },
-                {
-                    "label": "B.",
-                    "value": "Garden"
-                },
-                {
-                    "label": "C.",
-                    "value": "Drawer"
-                }
-            ],
-            "score":2,
-            "correctAnswer": "Drawer"
-        },
-        {
-            "question": "Do you remember which was the brand of your very first car you owned?",
-            "options": [
-                {
-                    "label": "A.",
-                    "value": "Volkswagen"
-                },
-                {
-                    "label": "B.",
-                    "value": "Audi"
-                },
-                {
-                    "label": "C.",
-                    "value": "Tesla"
-                }
-            ],
-            "score":2,
-            "correctAnswer": "Volkswagen"
-        },
-        {
-            "question": " Hello Buddy, May I know your name please?",
-            "options": [
-                {
-                    "label": "A.",
-                    "value": "Peter"
-                },
-                {
-                    "label": "B.",
-                    "value": "John"
-                },
-                {
-                    "label": "C.",
-                    "value": "Nick"
-                }
-            ],
-            "score":1,
-            "correctAnswer": "John"
-
-        },
-        {
-            "question": "How many family members do you have? ",
-            "options": [
-                {
-                    "label": "A.",
-                    "value": "5"
-                },
-                {
-                    "label": "B.",
-                    "value": "3"
-                },
-                {
-                    "label": "C.",
-                    "value": "2"
-                }
-            ],
-            "score":1,
-            "correctAnswer": "5"
-
-        },
-        {
-            "question": "Hi John, where do you stay? ",
-            "options": [
-                {
-                    "label": "A.",
-                    "value": "Delhi"
-                },
-                {
-                    "label": "B.",
-                    "value": "London"
-                },
-                {
-                    "label": "C.",
-                    "value": "Bristola"
-                }
-            ],
-            "score":1,
-            "correctAnswer": "Bristola"
-
-        },
-        {
-            "question": "Can you name any nearby street of your house?",
-            "options": [
-                {
-                    "label": "A.",
-                    "value": "Albany street"
-                },
-                {
-                    "label": "B.",
-                    "value": "Abbey Street"
-                },
-                {
-                    "label": "C.",
-                    "value": "Broad Street"
-                }
-            ],
-            "score":1,
-            "correctAnswer": "Albany street"
-
-        },
-        {
-            "question": "What is your blood group ? ",
-            "options": [
-                {
-                    "label": "A.",
-                    "value": "A+ve"
-                },
-                {
-                    "label": "B.",
-                    "value": "B+ve"
-                },
-                {
-                    "label": "C.",
-                    "value": "O+ve"
-                }
-            ],
-            "score":1,
-            "correctAnswer": "B+ve"
-
-        },
-        {
-            "question": "Are you married?  ",
-            "options": [
-                {
-                    "label": "A.",
-                    "value": "No"
-                },
-                {
-                    "label": "B.",
                     "value": "Yes"
+                },
+                {
+                    "label": "B.",
+                    "value": "No"
                 }
             ],
-            "score":1,
-            "correctAnswer": "Yes"
+            "score":4,
+            "correctAnswer": "No"
         },
         {
-            "question": "How many kids do you have? ",
+            "question": "What’s your kid’s favourite food dish?  ",
             "options": [
                 {
                     "label": "A.",
-                    "value": "1"
+                    "value": "Burger"
                 },
                 {
                     "label": "B.",
-                    "value": "3"
+                    "value": "Burrito"
                 },
                 {
-                    "label": "B.",
-                    "value": "5"
+                    "label": "C.",
+                    "value": "Chips"
                 }
             ],
-            "score":1,
-            "correctAnswer": "5"
+            "score":4,
+            "correctAnswer": "Burrito"
         },
         {
-            "question": "What is the name of your pet? ",
+            "question": "What’s your spouse’s favourite color ? ",
             "options": [
                 {
                     "label": "A.",
-                    "value": "Bravo"
+                    "value": "Blue"
                 },
                 {
                     "label": "B.",
-                    "value": "Bruno"
+                    "value": "Red"
                 },
                 {
-                    "label": "B.",
-                    "value": "Luci"
+                    "label": "C.",
+                    "value": "Green"
                 }
             ],
-            "score":1,
-            "correctAnswer": "Luci"
-        } 
+            "score":4,
+            "correctAnswer": "Blue"
+        }
     ]
 }
 
