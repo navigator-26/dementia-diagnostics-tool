@@ -6,3 +6,25 @@
   max-width: 200px;
 }
 
+.action-btn {
+  background-color: #D4A15A; // Autumn gold
+  color: white;
+  border-radius: 20px;
+ // padding: 10px 10px;
+
+  &:hover {
+    background-color: #BF7B30; // Burnt orange
+  }
+}
+
+ion-footer {
+  border-top: 1px solid #ddd; 
+}
+
+ion-label.user {
+  color: blue;
+}
+
+ion-label.bot {
+  color: green;
+}

@@ -64,6 +64,7 @@
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 15px;
   padding: 20px;
+  margin-top: 50px;
   text-align: center;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
@@ -96,6 +97,23 @@
 
 .margin-top{
   padding-top : 50px;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center; /* Centers the image horizontally */
+  align-items: center; /* Centers the image vertically */
+
+  /* Optional: Set a max-width to prevent excessive stretching */
+  max-width: 100%; /* Adjust as needed */
+  height: 200px; /* Fixed height, adjust as needed */
+
+  overflow: hidden; /* Ensures the image does not overflow its container */
+}
+
+.image-container img {
+  width: 150%; /* Stretch the image horizontally */
+  height: auto; /* Automatically adjusts the height to maintain aspect ratio */
 }
 
 

@@ -48,14 +48,14 @@
         <div *ngFor="let message of messages; let i = index" class="message" [class.right]=" message.userIsSender === true">
           <div class="msg-detail">
             <div class="msg-content">
-               <!-- <ng-container *ngIf="Array.isArray(message.message)">
+               <ng-container *ngIf="!isCheckArray(message.message)">
                 <p *ngFor="let msg of message.message;"> {{msg.option}} </p>
-              </ng-container> -->
+              </ng-container>
               <ion-chip color="primary" (click)="onMessageClicked($event,i,message.text)" *ngIf="!isCheckArray(message.text)" >{{message.text}}</ion-chip>
               
               <div *ngIf="isCheckArray(message.text)">
-                <ion-chip color="secondary" *ngFor="let msg of message.text" (click)="onMessageClicked($event,i,msg.option)"> {{msg.option}}</ion-chip>
-              </div>
+                <ion-chip color="secondary" *ngFor="let msg of message.text" (click)="onMessageClicked($event,i,msg.option)"> {{msg.option}}</ion-chip> 
+              </div> 
              
 
             </div>
@@ -63,7 +63,12 @@
           
         </div>
       </div>
-      <div id="bottom"></div>
     </ion-content>
+    <!-- <ion-footer id="bottom">
+      <ion-toolbar>
+      <ion-input #userInput placeholder="Type a message"></ion-input>
+      <ion-button class="action-btn" (click)="sendMessage(userInput.value)">Send</ion-button>
+      </ion-toolbar>
+    </ion-footer> -->
   </ng-template>
 </ion-modal>

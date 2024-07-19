@@ -14,8 +14,10 @@ interface Question {
   styleUrls: ['./questionnaire.component.scss'],
 })
 export class QuestionnaireComponent {
+  userConsent: boolean = false;
   currentQuestionIndex = 0;
   showFeedback = false;
+  isLoading: boolean = false;
   feedbackMessage : Array<string> = [];
 
   constructor(private alertController: AlertController,
@@ -182,8 +184,12 @@ export class QuestionnaireComponent {
     //redirect to result screen
   }
 
+  onConsentChange(event: any) {
+    this.userConsent = event.detail.checked;
+  }
+
   sendPostRequest(res) {
-    
+    this.isLoading = true;
     let httpHeaders:any = {
     'X-IBM-Client-Id':'3f93d54f8e62c14653cbac62b9652792',
     'X-IBM-Client-Secret':'c170e3ccb4f9c72cc9a586134d931e70'
@@ -194,9 +200,11 @@ export class QuestionnaireComponent {
 
     this.httpClient.post("https://api.ibm.com/digitalhealth/run/api/v1/mmse/text/prediction", body, {headers: httpHeaders})
       .subscribe(data => {
+        this.isLoading = false;
         console.log(data['_body']);
         this.router.navigateByUrl('/app/tabs/recommendations');
        }, error => {
+        this.isLoading = false;
         console.log(error);
       });
   }

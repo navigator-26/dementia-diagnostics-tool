@@ -17,6 +17,22 @@ ion-item.selected {
   --color: var(--ion-color-primary);
 }
 
+ion-title {
+  color : #6F4E37;
+}
+
+ion-chip{
+  background-color: #F4F1EC !important;
+  background: #F4F1EC !important;
+  color: #6F4E37 !important;
+}
+
+ion-input {
+  background-color: #F4F1EC !important;
+  background: #F4F1EC !important;
+  color: #6F4E37 !important; 
+}
+
 /*
  * Material Design Menu
 */
@@ -94,4 +110,8 @@ ion-menu.ios ion-item ion-icon {
 
 ion-menu.ios ion-item.selected ion-icon {
   color: var(--ion-color-primary);
+}
+
+.primary-clr {
+  color : #6F4E37 !important;
 }

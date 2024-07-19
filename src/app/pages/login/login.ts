@@ -24,28 +24,12 @@ export class LoginPage {
     private animationService: AnimationService
   ) { }
 
-  // onLogin(form: NgForm) {
-  //   this.submitted = true;
-
-  //   if (form.valid) {
-  //     this.userData.login(this.login.username);
-  //     // this.router.navigateByUrl(`/app/tabs/landing/${this.login.username}`);
-  //     this.router.navigateByUrl(`/app/tabs/welcome`);
-  //     //this.router.navigateByUrl(`/landing`);
-
-  //     //this.router.navigateByUrl(`/app/tabs/welcome`);
-  //   }
-  // }
-
   openWelcomePage() {
     this.router.navigateByUrl(`/app/tabs/welcome`);
-    //this.router.navigateByUrl(`/app/tabs/recommendations`);
+  // this.router.navigateByUrl(`/app/tabs/recommendations`);
+
   }
 
-  // openWelcomePage(event: Event) {
-  //   const buttonElement = event.target as HTMLElement;
-  //   this.animationService.animateAndNavigate(buttonElement, '/app/tabs/welcome');
-  // }
 
   onSignup() {
     this.router.navigateByUrl('/signup');

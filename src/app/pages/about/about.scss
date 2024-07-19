@@ -1,171 +1,30 @@
-ion-toolbar {
-  --background: transparent;
-  --color: white;
-  position: absolute;
-
-  top: 0;
-  right: 0;
-  left: 0;
-}
-
-ion-toolbar ion-button,
-ion-toolbar ion-back-button,
-ion-toolbar ion-menu-button {
-  --color: white;
-}
-
-ion-content {
-  background: #F4F1EC;
+.about-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
+  padding: 16px;
 }
 
-.about-header {
-  position: relative;
-
+.about-image {
   width: 100%;
-  height: 30%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 16px;
 }
 
-.about-header .about-image {
-  position: absolute;
-
-  inset: 0;
-
-  transition: opacity 500ms ease-in-out;
-
-  background-repeat: no-repeat;
-
-  background-position: center;
-  background-size: cover;
-
-  opacity: 0;
+.about-details {
+  text-align: center;
 }
 
-.about-header .madison {
-  background-image: url("/assets/img/about/madison.jpg");
+.about-details h2 {
+  margin-top: 16px;
+  color: #0056b3; /* Example color */
 }
 
-.about-header .austin {
-  background-image: url("/assets/img/about/austin.jpg");
-}
-
-.about-header .chicago {
-  background-image: url("/assets/img/about/chicago.jpg");
-}
-
-.about-header .seattle {
-  background-image: url("/assets/img/about/seattle.jpg");
-}
-
-.about-info {
-  position: relative;
-
-  margin-top: -10px;
-
-  border-radius: 10px;
-
-  background: #F4F1EC !important;
-
-  z-index: 2; // display rounded border above header image
-}
-
-.about-info h3 {
-  margin-top: 0;
-}
-
-.about-info ion-list {
-  padding-top: 0;
-}
-
-.about-info p {
-  color: var(--ion-color-dark);
-
-  line-height: 130%;
-}
-
-.about-info ion-icon {
-  margin-inline-end: 32px;
-}
-
-#date-input-popover {
-  --offset-y: -var(--ion-safe-area-bottom);
-  --max-width: 90%;
-  --width: 336px;
-}
-
-/*
- * iOS Only
- */
-
-.ios .about-info {
-  --ion-padding: 19px;
-}
-
-.ios .about-info h3 {
-  font-weight: 700;
-}
-
-.primary-clr {
-  color : #6F4E37;
-}
-
-.primary-txt{
-  color : #4A4A4A;
-}
-
-ion-content {
-  background: #F4F1EC;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-
-  ion-img {
-    padding-bottom : 40px !important;
-  }
-
-  h2 {
-    padding-bottom : 15px !important;
-  }
-
-  ion-list {
-    padding-bottom : 45px !important;
-  }
-
-  .action-btn {
-    background-color: #D4A15A; // Autumn gold
-    color: white;
-    border-radius: 20px;
-   // padding: 10px 10px;
-  
-    &:hover {
-      background-color: #BF7B30; // Burnt orange
-    }
-  }
-
-  .about-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    padding: 20px;
-    text-align: center;
-    background: #F4F1EC;
-  }
-
-  .responsive-logo {
-    width: 80%; 
-    max-width: 500px; 
-    height: auto; 
-    padding-top: 20px !important;
-  }
-
+.about-details p {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 8px;
 }

@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonModal } from '@ionic/angular';
 import { OverlayEventDetail } from '@ionic/core/components';
+import { ChatbotService } from '../../providers/chatbot.service';
 
 @Component({
   templateUrl: 'tabs-page.html'
@@ -8,11 +9,13 @@ import { OverlayEventDetail } from '@ionic/core/components';
 export class TabsPage {
   @ViewChild(IonModal) modal: IonModal;
 
-  
-
   messages: any = [{type: 'sent', text: "Are you looking for caregiver advice?"}];
+
+ // messages: Array<{ sender: string, text: string }> = [];
+
   
-  constructor() {}
+  constructor(private chatbotService: ChatbotService) {}
+
   cancel() {
     this.modal.dismiss(null, 'cancel');
   }
@@ -31,6 +34,7 @@ export class TabsPage {
   isCheckArray(val) {
     return Array.isArray(val)
   }
+
 
   onMessageClicked(event: Event, index, message) {
     const ev = event as CustomEvent<OverlayEventDetail<string>>;
@@ -65,6 +69,19 @@ export class TabsPage {
       }
     }
   }
+
+  // async sendMessage(userMessage : string | undefined) {
+  //   if (userMessage.trim()) {
+  //     this.messages.push({ sender: 'user', text: userMessage });
+  //     try {
+  //       const response = await this.chatbotService.sendMessage(userMessage);
+  //       this.messages.push({ sender: 'bot', text: response.reply });
+  //     } catch (error) {
+  //       this.messages.push({ sender: 'bot', text: 'Sorry, there was an error.' });
+  //     }
+  //     userMessage = '';
+  //   }
+  // }
 
 
 }

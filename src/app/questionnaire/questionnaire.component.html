@@ -24,8 +24,14 @@
   <div class="button-row">
     <ion-button class="action-btn" fill="clear" (click)="prevQuestion()" [disabled]="isFirstQuestion" [hidden]="isLastQuestion">Previous</ion-button>
     <ion-button class="action-btn" fill="clear" (click)="nextQuestion()" [hidden]="isLastQuestion">Next</ion-button>
-    <ion-checkbox [hidden]="!isLastQuestion"></ion-checkbox><span [hidden]="!isLastQuestion"> I agree to the terms and conditions</span>
-    <ion-button class="action-btn submit-btn" fill="clear" (click)="submitQuestionnaire()" [hidden]="!isLastQuestion">Submit</ion-button>
+    <ion-item [hidden]="!isLastQuestion">
+      <ion-label>Do you consent to share your questionnaire data with a 3rd party api ?</ion-label>
+      <ion-checkbox slot="start" (ionChange)="onConsentChange($event)"></ion-checkbox>
+    </ion-item>
+    <ion-button class="action-btn submit-btn" fill="clear" (click)="submitQuestionnaire()" [disabled]="!userConsent || isLoading" [hidden]="!isLastQuestion">Submit</ion-button>
+    <div [hidden]="!isLastQuestion" class="spinner-container">
+      <ion-spinner class="spinner" *ngIf="isLoading" name="crescent"></ion-spinner>
+    </div>
   </div>
 </ion-content>
   
