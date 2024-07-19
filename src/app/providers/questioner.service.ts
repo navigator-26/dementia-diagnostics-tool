@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
 import { UserData } from './user-data';
 
 @Injectable({
-  providedIn: 'root'
+ providedIn: 'root'
 })
 export class QuestionerData {
   data: any;

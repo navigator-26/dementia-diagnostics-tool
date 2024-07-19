@@ -10,9 +10,13 @@ ion-toolbar {
 
 ul {
   padding-left: 0px !important;
+  list-style-type: disc !important;
+  li {
+    list-style-type: inherit !important;
+  }
 }
 
-h3,p{
+h3,p,li{
   color:#6F4E37 !important;
 }
 

@@ -80,11 +80,11 @@ export class RecommendationsPage {
       ],
       "medium": [
         "Cognitively stimulating the activities (eg reading,games)",
-"Physical exercise( e.g. aerobic and anaerobic",
-"Social interactions with others (e.g family events)",
-"Healthy diet such as the Mediterranean diet( e.g high in green leafy vegetables)",
-"Adequate sleep(eg uninterrupted sleep and with sufficient number of hours)",
-"Psychological health(e.g participating in personally meaningful activities such as playing music)"
+        "Physical exercise( e.g. aerobic and anaerobic",
+        "Social interactions with others (e.g family events)",
+        "Healthy diet such as the Mediterranean diet( e.g high in green leafy vegetables)",
+        "Adequate sleep(eg uninterrupted sleep and with sufficient number of hours)",
+        "Psychological health(e.g participating in personally meaningful activities such as playing music)"
       ],
       "no_impact":[
         

@@ -5,6 +5,7 @@ import { IonicModule } from '@ionic/angular';
 import { RecommendationsPagePageRoutingModule } from './recommendations-routing.module';
 import { RecommendationsPage } from './recommendations';
 import { RoundProgressModule } from 'angular-svg-round-progressbar';
+import { QuestionerData } from '../../providers/questioner.service';
 
 @NgModule({
     imports: [
@@ -14,6 +15,7 @@ import { RoundProgressModule } from 'angular-svg-round-progressbar';
         RecommendationsPagePageRoutingModule,
         RoundProgressModule
     ],
+   // providers: [QuestionerData],
     declarations: [RecommendationsPage],
     bootstrap: [RecommendationsPage]
 })
